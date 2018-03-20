@@ -24,11 +24,10 @@ public class UserDAOIMPL implements UserDAO {
 	private User user;
 	public boolean save(User user) {
 		try {
-			System.out.println("asdf");
 			user.setRole('C');
 			user.setRegisteredDate(new Date(System.currentTimeMillis()) + "");
 			sessionFactory.getCurrentSession().save(user);
-			System.out.println("asdf");
+			System.out.println("save");
 			return true;
 		} catch (HibernateException e) {
 			// TODO Auto-generated catch block

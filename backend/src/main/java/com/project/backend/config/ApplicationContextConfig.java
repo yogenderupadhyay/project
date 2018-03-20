@@ -15,7 +15,7 @@ import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
-@ComponentScan("com.project.backend")
+@ComponentScan("com.project.backend.*")
 @EnableTransactionManagement
 public class ApplicationContextConfig {
 	@Bean("dataSource")
@@ -40,7 +40,7 @@ public class ApplicationContextConfig {
 	public SessionFactory getSessionFactory(DataSource dataSource) {
 		LocalSessionFactoryBuilder sessionBuilder=new LocalSessionFactoryBuilder(dataSource);
 		sessionBuilder.addProperties(getHibernateProperties());
-		sessionBuilder.scanPackages("com.project.backend");
+		sessionBuilder.scanPackages("com.project.backend.*");
 		return sessionBuilder.buildSessionFactory();
 	}
 	@Autowired

@@ -2,11 +2,13 @@ package com.project.backend.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
 
 @Component
 @Entity
+@Table(name="user")
 public class User {
 		 
 		@Id  
@@ -14,6 +16,8 @@ public class User {
 		private String name;
 		private String password;
 		private String mobile;
+		private Character role;
+		private String registeredDate;
 		public String getEmailID() {
 			return emailID;
 		}
@@ -50,6 +54,5 @@ public class User {
 		public void setRegisteredDate(String registeredDate) {
 			this.registeredDate = registeredDate;
 		}
-		private Character role;
-		private String registeredDate;
+		
 }
