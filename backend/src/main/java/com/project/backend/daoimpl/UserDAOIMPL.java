@@ -22,6 +22,7 @@ public class UserDAOIMPL implements UserDAO {
 	private SessionFactory sessionFactory;
 	@Autowired
 	private User user;
+	
 	public boolean save(User user) {
 		try {
 			user.setRole('C');
@@ -63,7 +64,6 @@ public class UserDAOIMPL implements UserDAO {
 
 			return true;
 		} catch (HibernateException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return false;
 		}

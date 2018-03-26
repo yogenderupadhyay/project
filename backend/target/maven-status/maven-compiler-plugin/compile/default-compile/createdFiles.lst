@@ -1,0 +1,13 @@
+com\project\backend\daoimpl\SupplierDAOIMPL.class
+com\project\backend\config\ApplicationContextConfig.class
+com\project\backend\DAO\UserDAO.class
+com\project\backend\DAO\SupplierDAO.class
+com\project\backend\domain\Category.class
+com\project\backend\DAO\CategoryDAO.class
+com\project\backend\daoimpl\CategoryDAOIMPL.class
+com\project\backend\daoimpl\ProductDAOIMPL.class
+com\project\backend\daoimpl\UserDAOIMPL.class
+com\project\backend\domain\Supplier.class
+com\project\backend\DAO\ProductDAO.class
+com\project\backend\domain\Product.class
+com\project\backend\domain\User.class

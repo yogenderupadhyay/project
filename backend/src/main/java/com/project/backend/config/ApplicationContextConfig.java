@@ -15,7 +15,7 @@ import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
-@ComponentScan("com.project.backend.*")
+@ComponentScan("com.project")
 @EnableTransactionManagement
 public class ApplicationContextConfig {
 	@Bean("dataSource")
@@ -32,7 +32,6 @@ public class ApplicationContextConfig {
 		Properties properties=new Properties();
 		properties.put("hibernate.show_sql", "true");
 		properties.put("hibernate.dialect", "org.hibernate.dialect.H2Dialect");
-		System.out.println("Tables created");
 		return properties;
 	}
 	@Autowired
@@ -40,9 +39,10 @@ public class ApplicationContextConfig {
 	public SessionFactory getSessionFactory(DataSource dataSource) {
 		LocalSessionFactoryBuilder sessionBuilder=new LocalSessionFactoryBuilder(dataSource);
 		sessionBuilder.addProperties(getHibernateProperties());
-		sessionBuilder.scanPackages("com.project.backend.*");
+		sessionBuilder.scanPackages("com.project");
 		return sessionBuilder.buildSessionFactory();
 	}
+			
 	@Autowired
 	@Bean("transactionManager")
 	public HibernateTransactionManager getTransactionManager(SessionFactory sessionFactory) {

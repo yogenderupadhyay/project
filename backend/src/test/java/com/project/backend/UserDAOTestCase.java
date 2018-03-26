@@ -27,29 +27,28 @@ public class UserDAOTestCase {
 		context.refresh();
 		userDAO=(UserDAO)context.getBean("userDAO");
 		user= (User)context.getBean("user");
-		System.out.println("1");
 	}
-	@Test
+	/*@Test
 	public void saveUserTestCase()
 	{
 		System.out.println("2");
-		user.setEmailID("amit@gmail.com");
+		user.setEmailID("yatin@gmail.com");
 		user.setMobile("95847621");
-		user.setName("amit upadhyay");
-		user.setPassword("amit");
+		user.setName("yatin upadhyay");
+		user.setPassword("yatin");
 		
 	  boolean status = 	userDAO.save(user);
 	  
 	  assertEquals("save user test case", true, status);
-	}
-	@Test
+	}*/
+	/*@Test
 	public void updateUserTestCase()
 	{
-		user.setEmailID("yogender@gmail.com");
-		user.setMobile("888888888");
+		user.setEmailID("niashant@gmail.com");
+		user.setName("nishant sharma");
 		boolean status = userDAO.update(user);
 		assertEquals("update test case", true,status );
-	}
+	}*/
 	
 	@Test
 	public void getUserSuccessTestCase()
@@ -64,23 +63,23 @@ public class UserDAOTestCase {
 	public void getUserFailureTestCase()
 	{
 		
-	user= userDAO.get("yatin@gmail.com");
+	user= userDAO.get("abc@gmail.com");
 	
 	assertNull("get user test case", user);
 	}
 	
-	@Test
+	/*@Test
 	public void deleteUserSuccessTestCase()
 	{
-	boolean status =	userDAO.delete("yogender");
+	boolean status =	userDAO.delete("amit1@gmail.com");
 	assertEquals("delete user succss test case" , true, status);
 	
 	}
-	
+	*/
 	@Test
 	public void deleteUserFailureTestCase()
 	{
-	boolean status =	userDAO.delete("abc@gmail.com");
+	boolean status =	userDAO.delete("abct@gmail.com");
 	assertEquals("delete user failure test case" , false, status);
 	
 	}
