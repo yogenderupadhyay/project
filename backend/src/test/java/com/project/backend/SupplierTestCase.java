@@ -78,6 +78,6 @@ private static AnnotationConfigApplicationContext context;
 	public void getAllSuppliersTestCase()
 	{
 	List<Supplier>	suppliers = supplierDAO.list();
-	assertEquals("get all usres " , 2, suppliers.size() );
+	assertEquals("get all usres " , 3, suppliers.size() );
 	}
 }

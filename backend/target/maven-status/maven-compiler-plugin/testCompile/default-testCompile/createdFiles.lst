@@ -1,3 +1,5 @@
-com\project\backend\CategorytestCase.class
+com\project\backend\CategoryTestCase.class
+com\project\backend\SupplierTestCase.class
+com\project\backend\ProductTestCase.class
 com\project\backend\UserDAOTestCase.class
 com\project\backend\TestConfiguration.class

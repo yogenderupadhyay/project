@@ -20,9 +20,7 @@ public class SupplierDAOIMPL implements SupplierDAO {
 	private Supplier supplier;
 	public boolean save(Supplier supplier) {
 		try {
-			System.out.println("1");
-			sessionFactory.getCurrentSession().save(supplier);
-			System.out.println("2");
+			sessionFactory.getCurrentSession().saveOrUpdate(supplier);
 			return true;
 		} catch (HibernateException e) {
 			e.printStackTrace();
@@ -39,12 +37,12 @@ public class SupplierDAOIMPL implements SupplierDAO {
 			return false;
 		}
 	}
-	public Supplier get(String emailID) {
-		return sessionFactory.getCurrentSession().get(Supplier.class, emailID);
+	public Supplier get(String id) {
+		return sessionFactory.getCurrentSession().get(Supplier.class, id);
 	}
-	public boolean delete(String emailID) {
+	public boolean delete(String id) {
 		try {
-			supplier = get(emailID);
+			supplier = get(id);
 			if (supplier == null) {
 				return false;
 			}

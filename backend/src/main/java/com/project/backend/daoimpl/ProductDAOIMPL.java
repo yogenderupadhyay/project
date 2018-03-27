@@ -37,14 +37,14 @@ public class ProductDAOIMPL implements ProductDAO {
 			return false;
 		}
 	}
-	public Product getProduct(String id) {
-		Product p = sessionFactory.getCurrentSession().get(Product.class, id);
+	public Product get(String id) {
+		Product p = sessionFactory.getCurrentSession().get(Product.class,id);
 		System.out.println("Inside get : "+p);
 		return p;
 	}
 	public boolean delete(String id) {
 		try {
-			product = getProduct(id);
+			product = get(id);
 			if (product == null) {
 				System.out.println("1");
 				return false;

@@ -21,7 +21,7 @@ public class CategoryDAOIMPL implements CategoryDAO {
 	private Category category;
 	public boolean save(Category category) {
 		try {
-			sessionFactory.getCurrentSession().save(category);
+			sessionFactory.getCurrentSession().saveOrUpdate(category);
 			return true;
 		} catch (HibernateException e) {
 			e.printStackTrace();

@@ -55,7 +55,7 @@ private static AnnotationConfigApplicationContext context;
 	@Test
 	public void getProductSuccessTestCase()
 	{
-	product= productDAO.getProduct("Lenevo-001");
+	product= productDAO.get("Lenevo-001");
 	assertNotNull("get product test case", product);
 	}
 	/*@Test

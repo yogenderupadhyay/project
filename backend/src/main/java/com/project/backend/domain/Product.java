@@ -16,6 +16,13 @@ public class Product {
 	private String id;
 	private String name;
 	private String description;
+	private int price;
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
 	private String categoryId;
 	private String supplierId;
 	@ManyToOne
