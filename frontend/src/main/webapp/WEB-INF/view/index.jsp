@@ -7,14 +7,14 @@
 <head>
 
 <title>index</title>
-<link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/STYLESHEET.css"/>" >
+<link rel="stylesheet" type="text/css" href="/resources/css/STYLESHEET.css" >
 </head>
 <body>
 <%@include file="header.jsp" %>
-	<div>
-	${welcomeMessage}
-	${errorMessage}
-	</div>
+<c:if test="${isAdmin==true}">
+	<jsp:include page="admin/adminhome.jsp"></jsp:include>
+
+	</c:if>
 	<div>
 	<c:if test="${isUserClickedLogin==true}">
 		<jsp:include page="login.jsp"></jsp:include>
