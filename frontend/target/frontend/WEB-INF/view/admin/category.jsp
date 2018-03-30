@@ -8,31 +8,29 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <title>Insert title here</title>
 </head>
 <body>
 	${categorySuccessMessage} ${categoryErrorMessage}
 	<form action="category/save/" method="post">
-		<table>
-			<tr>
-				<td>ID</td>
-				<td><input type="text" name='id' value="${selectedCategory.id}" ></td>
-			</tr>
-			<tr>
-			<td>Name</td>
-			<td><input type="text" name='name'value="${selectedCategory.name}"></td>
-			</tr>
-			<tr>
-			<td>Description</td>
-			<td><input type="text" name='description' value="${selectedCategory.description}"></td>
-			<tr>
-				<td><input type="submit" value='create category'></td>
-			</tr>
-		</table>
-	</form>
+    <div class="form-group">
+      <label for="email">ID:</label>
+      <input type="email" class="form-control" placeholder="Enter email" name="id" value="${selectedCategory.id}">
+
+      <label for="pwd">Name:</label>
+      <input type="password" class="form-control" placeholder="Enter password" name="name" value="${selectedCategory.name}">
+
+	<label for="pwd">Description:</label>
+      <input type="password" class="form-control" placeholder="Enter password" name="name" value=${selectedCategory.description}>
+    </div>
+    <button type="submit" class="btn btn-default">create category</button>
+  </form>
 
 	<div>
-		<table border="5" bgcolor="cyan">
+		<table class="table">
 			<tr>
 				<td>Category ID</td>
 				<td>Category Name</td>
@@ -44,8 +42,8 @@
 					<td>${category.id}</td>
 					<td>${category.name}</td>
 					<td>${category.description}</td>
-					<td><a href="category/delete/?id=${category.id}">Delete</a></td>
-					<td><a href="category/edit/?id=${category.id}">Edit</a></td>
+					<td><a href="category/delete/?id=${category.id}">Delete</a>|
+					<a href="category/edit/?id=${category.id}">Edit</a></td>
 				</tr>
 			</c:forEach>
 		</table>

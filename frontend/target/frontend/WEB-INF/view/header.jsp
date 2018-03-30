@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" isELIgnored="false"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,9 +9,17 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <title>Header</title>
+<style type="text/css">
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+color: white;
+}
+.nav-custom
+{color:white;}
+</style>
 </head>
 <body class="body">
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse nav-custom" class="active">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -22,28 +31,27 @@
       <a class="navbar-brand" href="#">SHOPPING BAZAR</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="index.jsp">Home</a></li>
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Page 1-1</a></li>
-            <li><a href="#">Page 1-2</a></li>
-            <li><a href="#">Page 1-3</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Page 2</a></li>
-        <li><a href="#">Page 3</a></li>
-      </ul>
-	
-      <ul class="nav navbar-nav navbar-right">
+     <form class="navbar-form navbar-left" action="/action_page.php">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search">
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+
+      <ul class="nav navbar-nav navbar-right" style="color:white;">
+      <c:if test="${(loggedInUserID==null)}">
         <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
         <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> login</a></li>
+        </c:if>
+        <c:if test="${(loggedInUserID!=null)}">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span>  ${welcomeMessage}</a></li>
+       <li><a href="logout"><span class="glyphicon glyphicon-log-out"></span> logout</a></li>
+        </c:if>
+        <li><a href="login"><span class="glyphicon glyphicon-shopping-cart"></span> cart</a></li>
       </ul>
     </div>
   </div>
 </nav> 
-${welcomeMessage}
-	${errorMessage}
+	
 </body>
 </html>

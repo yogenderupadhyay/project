@@ -8,9 +8,14 @@
 
 <title>index</title>
 <link rel="stylesheet" type="text/css" href="/resources/css/STYLESHEET.css" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 <%@include file="header.jsp" %>
+<c:if test="${(errorMessage!=null)}">
+       <i class="fa fa-frown-o" style="font-size:48px;color:red">${errorMessage}</i><br>
+       <jsp:include page="login.jsp"></jsp:include>
+  </c:if>
 <c:if test="${isAdmin==true}">
 	<jsp:include page="admin/adminhome.jsp"></jsp:include>
 
