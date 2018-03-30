@@ -39,7 +39,7 @@ public class ProductDAOIMPL implements ProductDAO {
 	}
 	public Product get(String id) {
 		Product p = sessionFactory.getCurrentSession().get(Product.class,id);
-		System.out.println("Inside get : "+p);
+		System.out.println("Inside get : "+p.getName());
 		return p;
 	}
 	public boolean delete(String id) {

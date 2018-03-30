@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="1" name="com.project.backend.SupplierTestCase" time="0.502" errors="0" skipped="0">
+<testsuite tests="4" failures="1" name="com.project.backend.SupplierTestCase" time="0.15" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_161\jre\bin"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jre1.8.0_161\bin"/>
     <property name="java.vm.version" value="25.161-b12"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="maven.multiModuleProjectDirectory" value="F:\Workstation\backend"/>
@@ -19,7 +19,7 @@
     <property name="user.dir" value="F:\Workstation\backend"/>
     <property name="java.runtime.version" value="1.8.0_161-b12"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_161\jre\lib\endorsed"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jre1.8.0_161\lib\endorsed"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.io.tmpdir" value="C:\Users\yogender\AppData\Local\Temp\"/>
     <property name="line.separator" value="
@@ -27,9 +27,9 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="F:\Workstation\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf1039325333012192953.tmp"/>
+    <property name="classworlds.conf" value="F:\Workstation\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf1838115320050085013.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_161\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_161/bin/server;C:/Program Files/Java/jre1.8.0_161/bin;C:/Program Files/Java/jre1.8.0_161/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;F:\apache-maven-3.5.2\bin;C:\Program Files\Java\jdk1.8.0_161\bin;C:\Users\yogender\AppData\Local\Microsoft\WindowsApps;C:\Users\yogender\AppData\Local\GitHubDesktop\bin;;F:\study material\softwares\eclipse;;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jre1.8.0_161\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_161/bin/server;C:/Program Files/Java/jre1.8.0_161/bin;C:/Program Files/Java/jre1.8.0_161/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;F:\apache-maven-3.5.2\bin;C:\Program Files\Java\jdk1.8.0_161\bin;C:\Users\yogender\AppData\Local\Microsoft\WindowsApps;C:\Users\yogender\AppData\Local\GitHubDesktop\bin;F:\study material\softwares\eclipse;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -43,15 +43,15 @@
     <property name="java.class.path" value="F:\study material\softwares\eclipse\plugins\org.eclipse.m2e.maven.runtime_1.8.2.20171007-0216\jars\plexus-classworlds-2.5.2.jar"/>
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_161\jre"/>
+    <property name="java.home" value="C:\Program Files\Java\jre1.8.0_161"/>
     <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B install"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
     <property name="java.vm.info" value="mixed mode"/>
     <property name="java.version" value="1.8.0_161"/>
-    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_161\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
-    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_161\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_161\jre\classes"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jre1.8.0_161\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jre1.8.0_161\lib\resources.jar;C:\Program Files\Java\jre1.8.0_161\lib\rt.jar;C:\Program Files\Java\jre1.8.0_161\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_161\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_161\lib\jce.jar;C:\Program Files\Java\jre1.8.0_161\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_161\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_161\classes"/>
     <property name="java.vendor" value="Oracle Corporation"/>
     <property name="maven.home" value="F:\Workstation\backend\EMBEDDED"/>
     <property name="file.separator" value="\"/>
@@ -61,18 +61,18 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.project.backend.SupplierTestCase" name="getSupplierFailureTestCase" time="0.192"/>
+  <testcase classname="com.project.backend.SupplierTestCase" name="getSupplierFailureTestCase" time="0.058"/>
   <testcase classname="com.project.backend.SupplierTestCase" name="getAllSuppliersTestCase" time="0.038">
-    <failure message="get all usres  expected:&lt;2&gt; but was:&lt;3&gt;" type="java.lang.AssertionError">java.lang.AssertionError: get all usres  expected:&lt;2&gt; but was:&lt;3&gt;
+    <failure message="get all usres  expected:&lt;3&gt; but was:&lt;4&gt;" type="java.lang.AssertionError">java.lang.AssertionError: get all usres  expected:&lt;3&gt; but was:&lt;4&gt;
 	at org.junit.Assert.fail(Assert.java:74)
 	at org.junit.Assert.failNotEquals(Assert.java:448)
 	at org.junit.Assert.assertEquals(Assert.java:102)
 	at org.junit.Assert.assertEquals(Assert.java:323)
 	at com.project.backend.SupplierTestCase.getAllSuppliersTestCase(SupplierTestCase.java:81)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.junit.internal.runners.TestMethod.invoke(TestMethod.java:59)
 	at org.junit.internal.runners.MethodRoadie.runTestMethod(MethodRoadie.java:98)
 	at org.junit.internal.runners.MethodRoadie$2.run(MethodRoadie.java:79)
@@ -89,24 +89,153 @@
 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
 	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
 	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
 	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </failure>
-    <system-out>Hibernate: select supplier0_.id as id1_2_, supplier0_.address as address2_2_, supplier0_.name as name3_2_ from Supplier supplier0_
-Hibernate: select products0_.supplierid as supplier5_1_0_, products0_.id as id1_1_0_, products0_.id as id1_1_1_, products0_.categoryId as category2_1_1_, products0_.description as descript3_1_1_, products0_.name as name4_1_1_, products0_.supplierid as supplier5_1_1_, category1_.id as id1_0_2_, category1_.description as descript2_0_2_, category1_.name as name3_0_2_ from Product products0_ inner join Category category1_ on products0_.categoryId=category1_.id where products0_.supplierid=?
-Hibernate: select products0_.supplierid as supplier5_1_0_, products0_.id as id1_1_0_, products0_.id as id1_1_1_, products0_.categoryId as category2_1_1_, products0_.description as descript3_1_1_, products0_.name as name4_1_1_, products0_.supplierid as supplier5_1_1_, category1_.id as id1_0_2_, category1_.description as descript2_0_2_, category1_.name as name3_0_2_ from Product products0_ inner join Category category1_ on products0_.categoryId=category1_.id where products0_.supplierid=?
-Hibernate: select products0_.supplierid as supplier5_1_0_, products0_.id as id1_1_0_, products0_.id as id1_1_1_, products0_.categoryId as category2_1_1_, products0_.description as descript3_1_1_, products0_.name as name4_1_1_, products0_.supplierid as supplier5_1_1_, category1_.id as id1_0_2_, category1_.description as descript2_0_2_, category1_.name as name3_0_2_ from Product products0_ inner join Category category1_ on products0_.categoryId=category1_.id where products0_.supplierid=?
+    <system-out>22:30:08.157 [main] DEBUG org.springframework.transaction.annotation.AnnotationTransactionAttributeSource - Adding transactional method &apos;com.project.backend.daoimpl.SupplierDAOIMPL.list&apos; with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; &apos;&apos;
+22:30:08.157 [main] DEBUG org.springframework.orm.hibernate5.HibernateTransactionManager - Creating new transaction with name [com.project.backend.daoimpl.SupplierDAOIMPL.list]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; &apos;&apos;
+22:30:08.157 [main] DEBUG org.springframework.orm.hibernate5.HibernateTransactionManager - Opened new Session [SessionImpl(PersistenceContext[entityKeys=[],collectionKeys=[]];ActionQueue[insertions=ExecutableList{size=0} updates=ExecutableList{size=0} deletions=ExecutableList{size=0} orphanRemovals=ExecutableList{size=0} collectionCreations=ExecutableList{size=0} collectionRemovals=ExecutableList{size=0} collectionUpdates=ExecutableList{size=0} collectionQueuedOps=ExecutableList{size=0} unresolvedInsertDependencies=null])] for Hibernate transaction
+22:30:08.157 [main] DEBUG org.springframework.orm.hibernate5.HibernateTransactionManager - Preparing JDBC Connection of Hibernate Session [SessionImpl(PersistenceContext[entityKeys=[],collectionKeys=[]];ActionQueue[insertions=ExecutableList{size=0} updates=ExecutableList{size=0} deletions=ExecutableList{size=0} orphanRemovals=ExecutableList{size=0} collectionCreations=ExecutableList{size=0} collectionRemovals=ExecutableList{size=0} collectionUpdates=ExecutableList{size=0} collectionQueuedOps=ExecutableList{size=0} unresolvedInsertDependencies=null])]
+22:30:08.157 [main] DEBUG org.springframework.jdbc.datasource.DriverManagerDataSource - Creating new JDBC DriverManager Connection to [jdbc:h2:~/test]
+22:30:08.191 [main] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - begin
+22:30:08.191 [main] DEBUG org.springframework.orm.hibernate5.HibernateTransactionManager - Exposing Hibernate transaction as JDBC transaction [conn14: url=jdbc:h2:~/test user=SA]
+22:30:08.192 [main] DEBUG org.hibernate.hql.internal.QueryTranslatorFactoryInitiator - QueryTranslatorFactory : org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory@1280851e
+22:30:08.192 [main] INFO org.hibernate.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+22:30:08.192 [main] DEBUG org.hibernate.hql.internal.ast.QueryTranslatorImpl - parse() - HQL: from com.project.backend.domain.Supplier
+22:30:08.193 [main] DEBUG org.hibernate.hql.internal.ast.QueryTranslatorImpl - --- HQL AST ---
+ \-[QUERY] Node: &apos;query&apos;
+    \-[SELECT_FROM] Node: &apos;SELECT_FROM&apos;
+       \-[FROM] Node: &apos;from&apos;
+          \-[RANGE] Node: &apos;RANGE&apos;
+             \-[DOT] Node: &apos;.&apos;
+                +-[DOT] Node: &apos;.&apos;
+                |  +-[DOT] Node: &apos;.&apos;
+                |  |  +-[DOT] Node: &apos;.&apos;
+                |  |  |  +-[IDENT] Node: &apos;com&apos;
+                |  |  |  \-[IDENT] Node: &apos;project&apos;
+                |  |  \-[IDENT] Node: &apos;backend&apos;
+                |  \-[IDENT] Node: &apos;domain&apos;
+                \-[IDENT] Node: &apos;Supplier&apos;
+
+22:30:08.193 [main] DEBUG org.hibernate.hql.internal.ast.ErrorCounter - throwQueryException() : no errors
+22:30:08.193 [main] DEBUG org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select &lt;&lt; begin [level=1, statement=select]
+22:30:08.193 [main] DEBUG org.hibernate.hql.internal.ast.tree.FromElement - FromClause{level=1} : com.project.backend.domain.Supplier (&lt;no alias&gt;) -&gt; supplier0_
+22:30:08.193 [main] DEBUG org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select : finishing up [level=1, statement=select]
+22:30:08.193 [main] DEBUG org.hibernate.hql.internal.ast.HqlSqlWalker - processQuery() :  ( SELECT ( FromClause{level=1} Supplier supplier0_ ) )
+22:30:08.194 [main] DEBUG org.hibernate.hql.internal.ast.HqlSqlWalker - Derived SELECT clause created.
+22:30:08.194 [main] DEBUG org.hibernate.hql.internal.ast.util.JoinProcessor - Using FROM fragment [Supplier supplier0_]
+22:30:08.194 [main] DEBUG org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select &gt;&gt; end [level=1, statement=select]
+22:30:08.194 [main] DEBUG org.hibernate.hql.internal.ast.QueryTranslatorImpl - --- SQL AST ---
+ \-[SELECT] QueryNode: &apos;SELECT&apos;  querySpaces (Supplier)
+    +-[SELECT_CLAUSE] SelectClause: &apos;{derived select clause}&apos;
+    |  +-[SELECT_EXPR] SelectExpressionImpl: &apos;supplier0_.id as id1_2_&apos; {FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=Supplier,tableAlias=supplier0_,origin=null,columns={,className=com.project.backend.domain.Supplier}}}
+    |  \-[SQL_TOKEN] SqlFragment: &apos;supplier0_.address as address2_2_, supplier0_.name as name3_2_&apos;
+    \-[FROM] FromClause: &apos;from&apos; FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[], fromElementByTableAlias=[supplier0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+       \-[FROM_FRAGMENT] FromElement: &apos;Supplier supplier0_&apos; FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=Supplier,tableAlias=supplier0_,origin=null,columns={,className=com.project.backend.domain.Supplier}}
+
+22:30:08.194 [main] DEBUG org.hibernate.hql.internal.ast.ErrorCounter - throwQueryException() : no errors
+22:30:08.194 [main] DEBUG org.hibernate.hql.internal.ast.QueryTranslatorImpl - HQL: from com.project.backend.domain.Supplier
+22:30:08.194 [main] DEBUG org.hibernate.hql.internal.ast.QueryTranslatorImpl - SQL: select supplier0_.id as id1_2_, supplier0_.address as address2_2_, supplier0_.name as name3_2_ from Supplier supplier0_
+22:30:08.194 [main] DEBUG org.hibernate.hql.internal.ast.ErrorCounter - throwQueryException() : no errors
+22:30:08.195 [main] DEBUG org.hibernate.SQL - select supplier0_.id as id1_2_, supplier0_.address as address2_2_, supplier0_.name as name3_2_ from Supplier supplier0_
+Hibernate: select supplier0_.id as id1_2_, supplier0_.address as address2_2_, supplier0_.name as name3_2_ from Supplier supplier0_
+22:30:08.195 [main] DEBUG org.hibernate.loader.Loader - Result set row: 0
+22:30:08.195 [main] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[com.project.backend.domain.Supplier#SUP-001]
+22:30:08.195 [main] DEBUG org.hibernate.loader.Loader - Result set row: 1
+22:30:08.196 [main] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[com.project.backend.domain.Supplier#sup003]
+22:30:08.196 [main] DEBUG org.hibernate.loader.Loader - Result set row: 2
+22:30:08.196 [main] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[com.project.backend.domain.Supplier#sup006]
+22:30:08.196 [main] DEBUG org.hibernate.loader.Loader - Result set row: 3
+22:30:08.196 [main] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[com.project.backend.domain.Supplier#sub008]
+22:30:08.196 [main] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [com.project.backend.domain.Supplier#SUP-001]
+22:30:08.196 [main] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [com.project.backend.domain.Supplier#SUP-001]
+22:30:08.197 [main] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [com.project.backend.domain.Supplier#sup003]
+22:30:08.197 [main] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [com.project.backend.domain.Supplier#sup003]
+22:30:08.197 [main] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [com.project.backend.domain.Supplier#sup006]
+22:30:08.197 [main] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [com.project.backend.domain.Supplier#sup006]
+22:30:08.197 [main] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [com.project.backend.domain.Supplier#sub008]
+22:30:08.197 [main] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [com.project.backend.domain.Supplier#sub008]
+22:30:08.198 [main] DEBUG org.hibernate.loader.collection.plan.AbstractLoadPlanBasedCollectionInitializer - Loading collection: [com.project.backend.domain.Supplier.products#sub008]
+22:30:08.198 [main] DEBUG org.hibernate.SQL - select products0_.supplierid as supplier6_1_0_, products0_.id as id1_1_0_, products0_.id as id1_1_1_, products0_.categoryId as category2_1_1_, products0_.description as descript3_1_1_, products0_.name as name4_1_1_, products0_.price as price5_1_1_, products0_.supplierid as supplier6_1_1_, category1_.id as id1_0_2_, category1_.description as descript2_0_2_, category1_.name as name3_0_2_ from Product products0_ inner join Category category1_ on products0_.categoryId=category1_.id where products0_.supplierid=?
+Hibernate: select products0_.supplierid as supplier6_1_0_, products0_.id as id1_1_0_, products0_.id as id1_1_1_, products0_.categoryId as category2_1_1_, products0_.description as descript3_1_1_, products0_.name as name4_1_1_, products0_.price as price5_1_1_, products0_.supplierid as supplier6_1_1_, category1_.id as id1_0_2_, category1_.description as descript2_0_2_, category1_.name as name3_0_2_ from Product products0_ inner join Category category1_ on products0_.categoryId=category1_.id where products0_.supplierid=?
+22:30:08.199 [main] DEBUG org.hibernate.loader.plan.exec.process.internal.ResultSetProcessorImpl - Preparing collection intializer : [com.project.backend.domain.Supplier.products#sub008]
+22:30:08.199 [main] DEBUG org.hibernate.engine.loading.internal.CollectionLoadContext - 1 collections were found in result set for role: com.project.backend.domain.Supplier.products
+22:30:08.199 [main] DEBUG org.hibernate.engine.loading.internal.CollectionLoadContext - Collection fully initialized: [com.project.backend.domain.Supplier.products#sub008]
+22:30:08.199 [main] DEBUG org.hibernate.engine.loading.internal.CollectionLoadContext - 1 collections initialized for role: com.project.backend.domain.Supplier.products
+22:30:08.199 [main] DEBUG org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - HHH000387: ResultSet&apos;s statement was not registered
+22:30:08.200 [main] DEBUG org.hibernate.loader.collection.plan.AbstractLoadPlanBasedCollectionInitializer - Done loading collection
+22:30:08.200 [main] DEBUG org.hibernate.loader.collection.plan.AbstractLoadPlanBasedCollectionInitializer - Loading collection: [com.project.backend.domain.Supplier.products#sup006]
+22:30:08.200 [main] DEBUG org.hibernate.SQL - select products0_.supplierid as supplier6_1_0_, products0_.id as id1_1_0_, products0_.id as id1_1_1_, products0_.categoryId as category2_1_1_, products0_.description as descript3_1_1_, products0_.name as name4_1_1_, products0_.price as price5_1_1_, products0_.supplierid as supplier6_1_1_, category1_.id as id1_0_2_, category1_.description as descript2_0_2_, category1_.name as name3_0_2_ from Product products0_ inner join Category category1_ on products0_.categoryId=category1_.id where products0_.supplierid=?
+Hibernate: select products0_.supplierid as supplier6_1_0_, products0_.id as id1_1_0_, products0_.id as id1_1_1_, products0_.categoryId as category2_1_1_, products0_.description as descript3_1_1_, products0_.name as name4_1_1_, products0_.price as price5_1_1_, products0_.supplierid as supplier6_1_1_, category1_.id as id1_0_2_, category1_.description as descript2_0_2_, category1_.name as name3_0_2_ from Product products0_ inner join Category category1_ on products0_.categoryId=category1_.id where products0_.supplierid=?
+22:30:08.201 [main] DEBUG org.hibernate.loader.plan.exec.process.internal.ResultSetProcessorImpl - Preparing collection intializer : [com.project.backend.domain.Supplier.products#sup006]
+22:30:08.201 [main] DEBUG org.hibernate.engine.loading.internal.CollectionLoadContext - 1 collections were found in result set for role: com.project.backend.domain.Supplier.products
+22:30:08.201 [main] DEBUG org.hibernate.engine.loading.internal.CollectionLoadContext - Collection fully initialized: [com.project.backend.domain.Supplier.products#sup006]
+22:30:08.201 [main] DEBUG org.hibernate.engine.loading.internal.CollectionLoadContext - 1 collections initialized for role: com.project.backend.domain.Supplier.products
+22:30:08.201 [main] DEBUG org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - HHH000387: ResultSet&apos;s statement was not registered
+22:30:08.201 [main] DEBUG org.hibernate.loader.collection.plan.AbstractLoadPlanBasedCollectionInitializer - Done loading collection
+22:30:08.201 [main] DEBUG org.hibernate.loader.collection.plan.AbstractLoadPlanBasedCollectionInitializer - Loading collection: [com.project.backend.domain.Supplier.products#sup003]
+22:30:08.201 [main] DEBUG org.hibernate.SQL - select products0_.supplierid as supplier6_1_0_, products0_.id as id1_1_0_, products0_.id as id1_1_1_, products0_.categoryId as category2_1_1_, products0_.description as descript3_1_1_, products0_.name as name4_1_1_, products0_.price as price5_1_1_, products0_.supplierid as supplier6_1_1_, category1_.id as id1_0_2_, category1_.description as descript2_0_2_, category1_.name as name3_0_2_ from Product products0_ inner join Category category1_ on products0_.categoryId=category1_.id where products0_.supplierid=?
+Hibernate: select products0_.supplierid as supplier6_1_0_, products0_.id as id1_1_0_, products0_.id as id1_1_1_, products0_.categoryId as category2_1_1_, products0_.description as descript3_1_1_, products0_.name as name4_1_1_, products0_.price as price5_1_1_, products0_.supplierid as supplier6_1_1_, category1_.id as id1_0_2_, category1_.description as descript2_0_2_, category1_.name as name3_0_2_ from Product products0_ inner join Category category1_ on products0_.categoryId=category1_.id where products0_.supplierid=?
+22:30:08.202 [main] DEBUG org.hibernate.loader.plan.exec.process.internal.ResultSetProcessorImpl - Preparing collection intializer : [com.project.backend.domain.Supplier.products#sup003]
+22:30:08.202 [main] DEBUG org.hibernate.engine.loading.internal.CollectionLoadContext - 1 collections were found in result set for role: com.project.backend.domain.Supplier.products
+22:30:08.202 [main] DEBUG org.hibernate.engine.loading.internal.CollectionLoadContext - Collection fully initialized: [com.project.backend.domain.Supplier.products#sup003]
+22:30:08.202 [main] DEBUG org.hibernate.engine.loading.internal.CollectionLoadContext - 1 collections initialized for role: com.project.backend.domain.Supplier.products
+22:30:08.202 [main] DEBUG org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - HHH000387: ResultSet&apos;s statement was not registered
+22:30:08.202 [main] DEBUG org.hibernate.loader.collection.plan.AbstractLoadPlanBasedCollectionInitializer - Done loading collection
+22:30:08.202 [main] DEBUG org.hibernate.loader.collection.plan.AbstractLoadPlanBasedCollectionInitializer - Loading collection: [com.project.backend.domain.Supplier.products#SUP-001]
+22:30:08.202 [main] DEBUG org.hibernate.SQL - select products0_.supplierid as supplier6_1_0_, products0_.id as id1_1_0_, products0_.id as id1_1_1_, products0_.categoryId as category2_1_1_, products0_.description as descript3_1_1_, products0_.name as name4_1_1_, products0_.price as price5_1_1_, products0_.supplierid as supplier6_1_1_, category1_.id as id1_0_2_, category1_.description as descript2_0_2_, category1_.name as name3_0_2_ from Product products0_ inner join Category category1_ on products0_.categoryId=category1_.id where products0_.supplierid=?
+Hibernate: select products0_.supplierid as supplier6_1_0_, products0_.id as id1_1_0_, products0_.id as id1_1_1_, products0_.categoryId as category2_1_1_, products0_.description as descript3_1_1_, products0_.name as name4_1_1_, products0_.price as price5_1_1_, products0_.supplierid as supplier6_1_1_, category1_.id as id1_0_2_, category1_.description as descript2_0_2_, category1_.name as name3_0_2_ from Product products0_ inner join Category category1_ on products0_.categoryId=category1_.id where products0_.supplierid=?
+22:30:08.203 [main] DEBUG org.hibernate.loader.plan.exec.process.internal.ResultSetProcessorImpl - Preparing collection intializer : [com.project.backend.domain.Supplier.products#SUP-001]
+22:30:08.203 [main] DEBUG org.hibernate.loader.plan.exec.process.internal.ResultSetProcessorImpl - Starting ResultSet row #0
+22:30:08.204 [main] DEBUG org.hibernate.loader.plan.exec.process.internal.CollectionReferenceInitializerImpl - Found row of collection: [com.project.backend.domain.Supplier.products#SUP-001]
+22:30:08.204 [main] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [com.project.backend.domain.Product#prd-001]
+22:30:08.204 [main] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [com.project.backend.domain.Product#prd-001]
+22:30:08.204 [main] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [com.project.backend.domain.Category#WoMenCategory001]
+22:30:08.204 [main] DEBUG org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [com.project.backend.domain.Category#WoMenCategory001]
+22:30:08.205 [main] DEBUG org.hibernate.engine.loading.internal.CollectionLoadContext - 1 collections were found in result set for role: com.project.backend.domain.Supplier.products
+22:30:08.205 [main] DEBUG org.hibernate.engine.loading.internal.CollectionLoadContext - Collection fully initialized: [com.project.backend.domain.Supplier.products#SUP-001]
+22:30:08.205 [main] DEBUG org.hibernate.engine.loading.internal.CollectionLoadContext - 1 collections initialized for role: com.project.backend.domain.Supplier.products
+22:30:08.205 [main] DEBUG org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - HHH000387: ResultSet&apos;s statement was not registered
+22:30:08.205 [main] DEBUG org.hibernate.loader.collection.plan.AbstractLoadPlanBasedCollectionInitializer - Done loading collection
+22:30:08.205 [main] DEBUG org.hibernate.loader.collection.plan.AbstractLoadPlanBasedCollectionInitializer - Loading collection: [com.project.backend.domain.Category.products#WoMenCategory001]
+22:30:08.205 [main] DEBUG org.hibernate.SQL - select products0_.categoryId as category2_1_0_, products0_.id as id1_1_0_, products0_.id as id1_1_1_, products0_.categoryId as category2_1_1_, products0_.description as descript3_1_1_, products0_.name as name4_1_1_, products0_.price as price5_1_1_, products0_.supplierid as supplier6_1_1_, supplier1_.id as id1_2_2_, supplier1_.address as address2_2_2_, supplier1_.name as name3_2_2_ from Product products0_ inner join Supplier supplier1_ on products0_.supplierid=supplier1_.id where products0_.categoryId=?
+Hibernate: select products0_.categoryId as category2_1_0_, products0_.id as id1_1_0_, products0_.id as id1_1_1_, products0_.categoryId as category2_1_1_, products0_.description as descript3_1_1_, products0_.name as name4_1_1_, products0_.price as price5_1_1_, products0_.supplierid as supplier6_1_1_, supplier1_.id as id1_2_2_, supplier1_.address as address2_2_2_, supplier1_.name as name3_2_2_ from Product products0_ inner join Supplier supplier1_ on products0_.supplierid=supplier1_.id where products0_.categoryId=?
+22:30:08.208 [main] DEBUG org.hibernate.loader.plan.exec.process.internal.ResultSetProcessorImpl - Preparing collection intializer : [com.project.backend.domain.Category.products#WoMenCategory001]
+22:30:08.209 [main] DEBUG org.hibernate.loader.plan.exec.process.internal.ResultSetProcessorImpl - Starting ResultSet row #0
+22:30:08.209 [main] DEBUG org.hibernate.loader.plan.exec.process.internal.CollectionReferenceInitializerImpl - Found row of collection: [com.project.backend.domain.Category.products#WoMenCategory001]
+22:30:08.210 [main] DEBUG org.hibernate.engine.loading.internal.CollectionLoadContext - 1 collections were found in result set for role: com.project.backend.domain.Category.products
+22:30:08.210 [main] DEBUG org.hibernate.engine.loading.internal.CollectionLoadContext - Collection fully initialized: [com.project.backend.domain.Category.products#WoMenCategory001]
+22:30:08.210 [main] DEBUG org.hibernate.engine.loading.internal.CollectionLoadContext - 1 collections initialized for role: com.project.backend.domain.Category.products
+22:30:08.210 [main] DEBUG org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - HHH000387: ResultSet&apos;s statement was not registered
+22:30:08.210 [main] DEBUG org.hibernate.loader.collection.plan.AbstractLoadPlanBasedCollectionInitializer - Done loading collection
+22:30:08.210 [main] DEBUG org.springframework.orm.hibernate5.HibernateTransactionManager - Initiating transaction commit
+22:30:08.210 [main] DEBUG org.springframework.orm.hibernate5.HibernateTransactionManager - Committing Hibernate transaction on Session [SessionImpl(PersistenceContext[entityKeys=[EntityKey[com.project.backend.domain.Category#WoMenCategory001], EntityKey[com.project.backend.domain.Supplier#SUP-001], EntityKey[com.project.backend.domain.Supplier#sup003], EntityKey[com.project.backend.domain.Product#prd-001], EntityKey[com.project.backend.domain.Supplier#sup006], EntityKey[com.project.backend.domain.Supplier#sub008]],collectionKeys=[CollectionKey[com.project.backend.domain.Supplier.products#sup003], CollectionKey[com.project.backend.domain.Supplier.products#SUP-001], CollectionKey[com.project.backend.domain.Supplier.products#sub008], CollectionKey[com.project.backend.domain.Category.products#WoMenCategory001], CollectionKey[com.project.backend.domain.Supplier.products#sup006]]];ActionQueue[insertions=ExecutableList{size=0} updates=ExecutableList{size=0} deletions=ExecutableList{size=0} orphanRemovals=ExecutableList{size=0} collectionCreations=ExecutableList{size=0} collectionRemovals=ExecutableList{size=0} collectionUpdates=ExecutableList{size=0} collectionQueuedOps=ExecutableList{size=0} unresolvedInsertDependencies=null])]
+22:30:08.210 [main] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - committing
+22:30:08.210 [main] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
+22:30:08.211 [main] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
+22:30:08.211 [main] DEBUG org.hibernate.engine.internal.Collections - Collection found: [com.project.backend.domain.Supplier.products#SUP-001], was: [com.project.backend.domain.Supplier.products#SUP-001] (initialized)
+22:30:08.211 [main] DEBUG org.hibernate.engine.internal.Collections - Collection found: [com.project.backend.domain.Supplier.products#sup003], was: [com.project.backend.domain.Supplier.products#sup003] (initialized)
+22:30:08.211 [main] DEBUG org.hibernate.engine.internal.Collections - Collection found: [com.project.backend.domain.Supplier.products#sup006], was: [com.project.backend.domain.Supplier.products#sup006] (initialized)
+22:30:08.211 [main] DEBUG org.hibernate.engine.internal.Collections - Collection found: [com.project.backend.domain.Supplier.products#sub008], was: [com.project.backend.domain.Supplier.products#sub008] (initialized)
+22:30:08.211 [main] DEBUG org.hibernate.engine.internal.Collections - Collection found: [com.project.backend.domain.Category.products#WoMenCategory001], was: [com.project.backend.domain.Category.products#WoMenCategory001] (initialized)
+22:30:08.212 [main] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 6 objects
+22:30:08.212 [main] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 5 collections
+22:30:08.212 [main] DEBUG org.hibernate.internal.util.EntityPrinter - Listing entities:
+22:30:08.212 [main] DEBUG org.hibernate.internal.util.EntityPrinter - com.project.backend.domain.Category{name=Women, description=This is Women category, id=WoMenCategory001, products=[com.project.backend.domain.Product#prd-001]}
+22:30:08.212 [main] DEBUG org.hibernate.internal.util.EntityPrinter - com.project.backend.domain.Supplier{address=kigsway cmp, delhi, name=suvidha store, id=SUP-001, products=[com.project.backend.domain.Product#prd-001]}
+22:30:08.212 [main] DEBUG org.hibernate.internal.util.EntityPrinter - com.project.backend.domain.Supplier{address=delhi, name=yatin, id=sup003, products=[]}
+22:30:08.212 [main] DEBUG org.hibernate.internal.util.EntityPrinter - com.project.backend.domain.Product{supplierId=SUP-001, price=20000, supplier=com.project.backend.domain.Supplier#SUP-001, name=guitar, description=this is guitar, id=prd-001, category=com.project.backend.domain.Category#WoMenCategory001, categoryId=WoMenCategory001}
+22:30:08.213 [main] DEBUG org.hibernate.internal.util.EntityPrinter - com.project.backend.domain.Supplier{address=dehradun, name=abc, id=sup006, products=[]}
+22:30:08.213 [main] DEBUG org.hibernate.internal.util.EntityPrinter - com.project.backend.domain.Supplier{address=pujab, name=abcd, id=sub008, products=[]}
+22:30:08.213 [main] DEBUG org.springframework.orm.hibernate5.HibernateTransactionManager - Closing Hibernate Session [SessionImpl(PersistenceContext[entityKeys=[EntityKey[com.project.backend.domain.Category#WoMenCategory001], EntityKey[com.project.backend.domain.Supplier#SUP-001], EntityKey[com.project.backend.domain.Supplier#sup003], EntityKey[com.project.backend.domain.Product#prd-001], EntityKey[com.project.backend.domain.Supplier#sup006], EntityKey[com.project.backend.domain.Supplier#sub008]],collectionKeys=[CollectionKey[com.project.backend.domain.Supplier.products#sup003], CollectionKey[com.project.backend.domain.Supplier.products#SUP-001], CollectionKey[com.project.backend.domain.Supplier.products#sub008], CollectionKey[com.project.backend.domain.Category.products#WoMenCategory001], CollectionKey[com.project.backend.domain.Supplier.products#sup006]]];ActionQueue[insertions=ExecutableList{size=0} updates=ExecutableList{size=0} deletions=ExecutableList{size=0} orphanRemovals=ExecutableList{size=0} collectionCreations=ExecutableList{size=0} collectionRemovals=ExecutableList{size=0} collectionUpdates=ExecutableList{size=0} collectionQueuedOps=ExecutableList{size=0} unresolvedInsertDependencies=null])] after transaction
 </system-out>
-    <system-err>Mar 27, 2018 10:35:47 AM org.hibernate.hql.internal.QueryTranslatorFactoryInitiator initiateService
-INFO: HHH000397: Using ASTQueryTranslatorFactory
-</system-err>
   </testcase>
-  <testcase classname="com.project.backend.SupplierTestCase" name="getSupplierSuccessTestCase" time="0.131"/>
-  <testcase classname="com.project.backend.SupplierTestCase" name="deleteSupplierFailureTestCase" time="0.141"/>
+  <testcase classname="com.project.backend.SupplierTestCase" name="getSupplierSuccessTestCase" time="0.034"/>
+  <testcase classname="com.project.backend.SupplierTestCase" name="deleteSupplierFailureTestCase" time="0.02"/>
 </testsuite>

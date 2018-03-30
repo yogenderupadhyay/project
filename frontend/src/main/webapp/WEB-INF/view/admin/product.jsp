@@ -32,7 +32,8 @@
 				<td><input type="text" name="price"	value="${selectedProduct.price}">
 			</tr>
 			<tr>
-			<td>product image<input type="file" name="file"></td>
+			<td>product image </td>
+			<td><input type="file" name="file"></td>
 			</tr>
 			<tr>
 				<td>Select Category</td>
@@ -57,7 +58,7 @@
 	</form>
 
 	<div>
-		<table border="5" bgcolor="cyan">
+		<table class="table">
 			<tr>
 				<td>Product ID</td>
 				<td>Product Name</td>
@@ -69,8 +70,8 @@
 					<td>${product.id}</td>
 					<td>${product.name}</td>
 					<td>${product.description}</td>
-					<td><a href="product/delete/?id=${product.id}">Delete</a></td>
-					<td><a href="product/edit/?id=${product.id}">Edit</a></td>
+					<td><a href="product/delete/?id=${product.id}">Delete</a>|
+					<a href="product/edit/?id=${product.id}">Edit</a></td>
 				</tr>
 			</c:forEach>
 		</table>

@@ -10,13 +10,11 @@
 <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/STYLESHEET.css"/>" >
 </head>
 <body>
-<header>
 		<ul id="right">
 	  			<li><a href="managecategories"> Manage Categories</a></li> 
-	  			<li><a href="managesupplier"> Manage Suppliers</a></li> 
+	  			<li><a href="managesuppliers"> Manage Suppliers</a></li> 
 	  			<li><a href="manageproducts">Manage Products</a> </li> 
 			</ul>
-			</header>
 	<br>
 
 	<c:if test="${isAdminClickedManageCategories==true }">

@@ -3,6 +3,7 @@ package com.project.frontend.util;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.IOException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,34 +13,21 @@ import com.project.frontend.controller.ProductController;
 
 public class FileUtil {
 	private static final Logger logger = LoggerFactory
-			.getLogger(ProductController.class);
-	public static boolean copyFile(MultipartFile file, String fileName){
-		if (!file.isEmpty()) {
+			.getLogger(FileUtil.class);
+	private static final String imageDirectory ="ShoppingCartImages";
+	private static String rootPath = System.getProperty("catalina.home");
+	public static boolean copyFileNIO(MultipartFile file, String fileName){
+		File dest = new File(rootPath +File.separator+imageDirectory+File.separator+fileName);{
+			if (!dest.exists()) {
+				dest.mkdir();
+			}
 			try {
-				byte[] bytes = file.getBytes();
-
-				// Creating the directory to store file
-				String rootPath = System.getProperty("catalina.home");
-				File dir = new File(rootPath + File.separator + "tmpFiles");
-				if (!dir.exists())
-					dir.mkdirs();
-
-				// Create the file on server
-				File serverFile = new File(dir.getAbsolutePath()
-						+ File.separator + fileName);
-				BufferedOutputStream stream = new BufferedOutputStream(
-						new FileOutputStream(serverFile));
-				stream.write(bytes);
-				stream.close();
-
-				logger.info("Server File Location="
-						+ serverFile.getAbsolutePath());
-
+				file.transferTo(dest);
 				return true;
 			} catch (Exception e) {
-				return false;
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
-		} else {
 			return false;
 		}
 	}

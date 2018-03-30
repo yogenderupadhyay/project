@@ -27,16 +27,7 @@ public class IndexController {
 		return mv;
 		
 	}
-	@RequestMapping("/logout")
-	public ModelAndView  logout()
-	{
-		
-		ModelAndView mv = new ModelAndView("login");
-		httpSession.invalidate();
-		mv.addObject("logoutMessage", "Successfully logout");
-		return mv;
-		
-	}
+	
 	
 	@RequestMapping("/register")
 	public ModelAndView  registration()

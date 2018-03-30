@@ -35,13 +35,31 @@ public class UserController {
 		}
 		else
 		{
-			mv.addObject("welcomeMessage" , "Welcome Mr. "+user.getName());
+			/*if(user.getRole()=='A')
+
+			{
+				mv.addObject("isAdmin", true);
+			}*/
+			httpSession.setAttribute("welcomeMessage" , user.getName());
+			httpSession.setAttribute("loggedInUserID", user.getEmailID());
 			if(user.getRole()=='A')
 
 			{
 				httpSession.setAttribute("isAdmin", true);
 			}
 		}
+		return mv;
+		
+	}
+	@RequestMapping("/logout")
+	public ModelAndView  logout()
+	{
+		
+		ModelAndView mv = new ModelAndView("index");
+		/*mv.addObject("isUserClickedLogin", true);*/
+		mv.addObject("welcomeMessage" , null);
+		httpSession.invalidate();
+		mv.addObject("logoutMessage", "Successfully logout");
 		return mv;
 		
 	}

@@ -2,6 +2,7 @@ package com.project.backend.DAO;
 
 import java.util.List;
 
+import com.project.backend.domain.Cart;
 import com.project.backend.domain.Category;
 
 public interface CategoryDAO {

@@ -51,7 +51,7 @@ public class ProductController {
 			product.setSupplierId(supplierID);
 			if (productDAO.save(product)) {
 				mv.addObject("productSuccessMessage", "The product created successfully");
-				if(FileUtil.copyFile(file, id+"PNG")) {
+				if(FileUtil.copyFileNIO(file, id+"PNG")) {
 					
 				}else {
 					

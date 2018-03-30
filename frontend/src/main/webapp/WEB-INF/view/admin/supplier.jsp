@@ -30,7 +30,7 @@ ${supplierSuccessMessage} ${supplierErrorMessage}
 		</table>
 	</form>
 	<div>
-		<table border="5" bgcolor="cyan">
+		<table border="5" bgcolor="cyan" class="table">
 			<tr>
 				<td>Supplier ID</td>
 				<td>Supplier Name</td>
@@ -42,8 +42,8 @@ ${supplierSuccessMessage} ${supplierErrorMessage}
 					<td>${supplier.id}</td>
 					<td>${supplier.name}</td>
 					<td>${supplier.address}</td>
-					<td><a href="supplier/delete/?id=${supplier.id}">Delete</a></td>
-					<td><a href="supplier/edit/?id=${supplier.id}">Edit</a></td>
+					<td><a href="supplier/delete/?id=${supplier.id}">Delete</a>|
+					<a href="supplier/edit/?id=${supplier.id}">Edit</a></td>
 				</tr>
 			</c:forEach>
 		</table>

@@ -7,7 +7,7 @@
 <head>
 
 <title>index</title>
-<link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/STYLESHEET.css"/>" >
+<link rel="stylesheet" type="text/css" href="/resources/css/STYLESHEET.css" >
 </head>
 <body>
 <%@include file="header.jsp" %>
