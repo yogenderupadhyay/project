@@ -27,8 +27,8 @@ color: white;
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#"><img src="resources/images/logo.PNG" ></a>
-      <a class="navbar-brand" href="#">SHOPPING BAZAR</a>
+      <a class="navbar-brand" href="/"><img src="resources/images/logo.PNG"></a>
+      <a class="navbar-brand" href="/">SHOPPING BAZAR</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
      <form class="navbar-form navbar-left" action="/action_page.php">

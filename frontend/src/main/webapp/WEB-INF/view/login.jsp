@@ -12,7 +12,7 @@
 <body>
 
 <div class="container">
-<img src="resources/images/login.png" height=70px width=70px>
+<img src="resources/images/login.PNG" >
   <h2>Login Here</h2>
   <form action="validate">
     <div class="form-group">
