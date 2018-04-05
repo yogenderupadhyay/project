@@ -27,8 +27,8 @@ color: white;
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="/"><img src="resources/images/logo.PNG"></a>
-      <a class="navbar-brand" href="/">SHOPPING BAZAR</a>
+      <a class="navbar-brand" href=" "><img src="resources/images/logo.PNG" alt="logo" height="50px" width="50px"></a>
+      <a class="navbar-brand" href=" ">SHOPPING BAZAR</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
      <form class="navbar-form navbar-left" action="/action_page.php">
@@ -47,7 +47,7 @@ color: white;
         <li><a href="#"><span class="glyphicon glyphicon-user"></span>  ${welcomeMessage}</a></li>
        <li><a href="logout"><span class="glyphicon glyphicon-log-out"></span> logout</a></li>
         </c:if>
-        <li><a href="login"><span class="glyphicon glyphicon-shopping-cart"></span> cart</a></li>
+        <li><a href="mycart"><span class="glyphicon glyphicon-shopping-cart"></span> cart(${size})</a></li>
       </ul>
     </div>
   </div>

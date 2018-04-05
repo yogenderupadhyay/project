@@ -12,10 +12,17 @@
 </head>
 <body>
 <%@include file="header.jsp" %>
+	<jsp:include page="product_menu.jsp"></jsp:include>
+	<c:if test="${isUserSelectedProduct==true}">
+		<jsp:include page="selected_product.jsp"></jsp:include>
+	</c:if>
 <c:if test="${(errorMessage!=null)}">
        <i class="fa fa-frown-o" style="font-size:48px;color:red">${errorMessage}</i><br>
        <jsp:include page="login.jsp"></jsp:include>
   </c:if>
+  <c:if test="${isUserClickedMyCart==true}">
+		<jsp:include page="cart.jsp"></jsp:include>
+	</c:if>
 <c:if test="${isAdmin==true}">
 	<jsp:include page="admin/adminhome.jsp"></jsp:include>
 
@@ -29,5 +36,6 @@
 		<%@ include file="registration.jsp" %>
 	</c:if>	
 	</div>
+	
 </body>
 </html>

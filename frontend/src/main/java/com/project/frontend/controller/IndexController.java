@@ -1,5 +1,10 @@
 package com.project.frontend.controller;
 
+import java.io.File;
+import java.util.List;
+
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,13 +12,39 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.project.backend.DAO.CategoryDAO;
+import com.project.backend.domain.Category;
+
+import jdk.nashorn.internal.ir.RuntimeNode.Request;
+
 @Controller
 public class IndexController {
 	@Autowired
+	private CategoryDAO categoryDAO;
+	@Autowired
 	private HttpSession httpSession;
+	
+	//C:\Users\Abbas\eclipse-workspace\Temp\ShoppingCart\src\main\webapp\resources\images
+	//private static String imageDirectory = "resources" + File.separator+ "images";
+	public static String imageDirectory="F:\\Workstation\\frontend\\src\\main\\webapp\\resources\\images\\uploads";
+	/*private static String rootPath = System.getProperty("catalina.home");*/
 	@RequestMapping("/")
-	public ModelAndView index() {
+	public ModelAndView index(HttpServletRequest request) {
 		ModelAndView mv = new ModelAndView("index");
+		List<Category> categories = categoryDAO.list();
+		httpSession.setAttribute("categories", categories);
+		httpSession.setAttribute("imageDirectory", imageDirectory);
+
+		String root =request.getContextPath();
+
+	    String imageFolder =  root + File.separator +"src" + File.separator + 
+	    		"main" +File.separator +
+	    		"webapp"+File.separator +
+	    		"resources"+File.separator +
+	    		"images"+File.separator ;	
+
+	    httpSession.setAttribute("imageFolder", imageFolder);
+		/*httpSession.setAttribute("ImageFolder", rootpath+File.pathSeparator+imageDirectory+File.pathSeparator);*/
 		return mv;
 		
 	}

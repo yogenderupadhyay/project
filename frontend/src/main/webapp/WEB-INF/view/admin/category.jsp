@@ -17,14 +17,14 @@
 	${categorySuccessMessage} ${categoryErrorMessage}
 	<form action="category/save/" method="post">
     <div class="form-group">
-      <label for="email">ID:</label>
-      <input type="email" class="form-control" placeholder="Enter email" name="id" value="${selectedCategory.id}">
+      <label for="id">ID:</label>
+      <input type="text" class="form-control" placeholder="Enter ID" name="id" value="${selectedCategory.id}">
 
-      <label for="pwd">Name:</label>
-      <input type="password" class="form-control" placeholder="Enter password" name="name" value="${selectedCategory.name}">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" placeholder="Enter Category name" name="name" value="${selectedCategory.name}">
 
-	<label for="pwd">Description:</label>
-      <input type="password" class="form-control" placeholder="Enter password" name="name" value=${selectedCategory.description}>
+	<label for="description">Description:</label>
+      <input type="text" class="form-control" placeholder="Enter password" name="description" value=${selectedCategory.description}>
     </div>
     <button type="submit" class="btn btn-default">create category</button>
   </form>

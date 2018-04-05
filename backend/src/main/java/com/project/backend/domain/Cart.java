@@ -21,7 +21,20 @@ public class Cart {
 	private String productName;
 	private int price;
 	private int quantity;
+	private String productID;
 	
+	public String getProductID() {
+		return productID;
+	}
+	public void setProductID(String productID) {
+		this.productID = productID;
+	}
+	public int getTotal() {
+		return total;
+	}
+	public void setTotal(int total) {
+		this.total = total;
+	}
 	@Transient
 	private int total;
 	public int getId() {
