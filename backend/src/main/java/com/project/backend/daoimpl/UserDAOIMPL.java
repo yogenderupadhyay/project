@@ -16,9 +16,6 @@ import com.project.backend.DAO.UserDAO;
 import com.project.backend.domain.User;
 
 
-
-
-
 @Transactional
 @Repository("userDAO")
 public class UserDAOIMPL implements UserDAO {

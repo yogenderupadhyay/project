@@ -18,6 +18,7 @@ public class ProductDAOIMPL implements ProductDAO {
 	private SessionFactory sessionFactory;
 	@Autowired
 	private Product product;
+
 	public boolean save(Product product) {
 
 		try {
@@ -28,6 +29,7 @@ public class ProductDAOIMPL implements ProductDAO {
 			return false;
 		}
 	}
+
 	public boolean update(Product product) {
 		try {
 			sessionFactory.getCurrentSession().update(product);
@@ -37,11 +39,13 @@ public class ProductDAOIMPL implements ProductDAO {
 			return false;
 		}
 	}
+
 	public Product get(String id) {
-		Product p = sessionFactory.getCurrentSession().get(Product.class,id);
-		System.out.println("Inside get : "+p.getName());
+		Product p = sessionFactory.getCurrentSession().get(Product.class, id);
+		System.out.println("Inside get : " + p.getName());
 		return p;
 	}
+
 	public boolean delete(String id) {
 		try {
 			product = get(id);
@@ -49,7 +53,7 @@ public class ProductDAOIMPL implements ProductDAO {
 				System.out.println("1");
 				return false;
 			}
-			
+
 			sessionFactory.getCurrentSession().delete(product);
 			System.out.println("delete");
 			return true;
@@ -58,8 +62,26 @@ public class ProductDAOIMPL implements ProductDAO {
 			return false;
 		}
 	}
+
 	public List<Product> list() {
 		return sessionFactory.getCurrentSession().createQuery("from Product").list();
+	}
+
+	public List<Product> search(String searchString) {
+
+		String hql = "from Product where description like '%" + searchString + "%'";
+		return sessionFactory.getCurrentSession().createQuery(hql).list();
+	}
+
+	public List<Product> search(String searchString, int maxPrice) {
+
+		String hql = "from Product where description like '%" + searchString + "%'  and price < " + maxPrice;
+		return sessionFactory.getCurrentSession().createQuery(hql).list();
+
+	}
+
+	public List<Product> search(String searchString, int minPrice, int maxPrice) {
+		return null;
 	}
 
 }

@@ -10,4 +10,7 @@ public interface ProductDAO {
 	public Product get(String id);
 	public boolean delete(String id);
 	public List<Product> list();
+public List<Product>    search(String searchString);
+	public List<Product>    search(String searchString, int maxPrice);
+	public List<Product>    search(String searchString, int minPrice , int maxPrice);
 }

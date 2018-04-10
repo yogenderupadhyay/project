@@ -27,6 +27,11 @@
 	<jsp:include page="admin/adminhome.jsp"></jsp:include>
 
 	</c:if>
+	<c:if test="${isUserClickedMyCart==true}">
+
+		<jsp:include page="cart.jsp"></jsp:include>
+
+	</c:if>
 	<div>
 	<c:if test="${isUserClickedLogin==true}">
 		<jsp:include page="login.jsp"></jsp:include>

@@ -28,19 +28,22 @@ public class UserDAOTestCase {
 		userDAO=(UserDAO)context.getBean("userDAO");
 		user= (User)context.getBean("user");
 	}
-	/*@Test
+	@Test
 	public void saveUserTestCase()
 	{
 		System.out.println("2");
-		user.setEmailID("yatin@gmail.com");
+		user.setEmailID("yatin2@gmail.com");
 		user.setMobile("95847621");
-		user.setName("yatin upadhyay");
+		user.setName("yatin");
+		user.setLastName("upadhyay");
 		user.setPassword("yatin");
+		user.setdOB("02\04\1994");
+		user.setGender("male");
 		
 	  boolean status = 	userDAO.save(user);
 	  
 	  assertEquals("save user test case", true, status);
-	}*/
+	}
 	/*@Test
 	public void updateUserTestCase()
 	{

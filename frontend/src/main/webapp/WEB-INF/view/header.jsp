@@ -31,7 +31,7 @@ color: white;
       <a class="navbar-brand" href=" ">SHOPPING BAZAR</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
-     <form class="navbar-form navbar-left" action="/action_page.php">
+     <form class="navbar-form navbar-left" action="search">
       <div class="form-group">
         <input type="text" class="form-control" placeholder="Search">
       </div>

@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -25,8 +25,25 @@ public class CartController {
 	private Cart cart;
 	@Autowired 
 	private HttpSession httpSession;
+	
+	@GetMapping("/Buy")
+	public ModelAndView order()
+	{
+		ModelAndView mv = new ModelAndView("home");
+		String loggedInUserID =(String) httpSession.getAttribute("loggedInUserID");
+		if (cartDAO.update(loggedInUserID))
+		{
+			mv.addObject("successMessage", "Your order placed successfully...");
+		}
+		else
+		{
+			mv.addObject("errorMessage", "Your order could placed.   please try after some time.");
+		}
+		
+		return mv;
+	}
 
-	@PostMapping("/product/cart/add")
+	@RequestMapping("/cart/add")
 	public ModelAndView addToCart(@RequestParam String productName,
 			@RequestParam int price, @RequestParam String quantity)
 	{
@@ -50,7 +67,7 @@ public class CartController {
 		}
 		return mv;
 	}
-	@GetMapping("/mycart")
+	@RequestMapping("/mycart")
 	public ModelAndView  getMyCartDetails()
 	{
 		log.debug("Starting of the method getMyCartDetails");

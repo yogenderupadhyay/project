@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="cart/add" method = "post">
+<form action="cart/add" method = "Get">
 <%-- <img alt="" src="${selectedProductImage}"> <br> --%>
 ${selectedProduct.id}
 <img alt="" src="resources/images/uploads/${selectedProduct.id}.PNG">
