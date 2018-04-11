@@ -40,11 +40,7 @@ public class UserController {
 			mv.addObject("errorMessage", "Invalid credentials..please try again.");
 
 		} else {
-			/*
-			 * if(user.getRole()=='A')
-			 * 
-			 * { mv.addObject("isAdmin", true); }
-			 */
+			 
 			httpSession.setAttribute("welcomeMessage", user.getName());
 			httpSession.setAttribute("loggedInUserID", user.getEmailID());
 			httpSession.setAttribute("isLoggedIn", true);

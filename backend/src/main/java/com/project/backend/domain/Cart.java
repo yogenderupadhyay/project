@@ -1,5 +1,7 @@
 package com.project.backend.domain;
 
+import java.util.Random;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -40,8 +42,8 @@ public class Cart {
 	public int getId() {
 		return id;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setId() {
+		this.id = new Random().nextInt();
 	}
 	public String getEmailID() {
 		return emailID;

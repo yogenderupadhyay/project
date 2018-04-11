@@ -32,12 +32,12 @@ public class UserDAOTestCase {
 	public void saveUserTestCase()
 	{
 		System.out.println("2");
-		user.setEmailID("yatin2@gmail.com");
+		user.setEmailID("yatin3@gmail.com");
 		user.setMobile("95847621");
 		user.setName("yatin");
 		user.setLastName("upadhyay");
 		user.setPassword("yatin");
-		user.setdOB("02\04\1994");
+		user.setdOB("02/04/1994");
 		user.setGender("male");
 		
 	  boolean status = 	userDAO.save(user);

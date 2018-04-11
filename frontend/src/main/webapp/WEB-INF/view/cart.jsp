@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+
 <a href="buy"> BUY</a>  <br>
 <c:forEach var="cart" items="${cartList}">
 <img alt="" src=" ${ImagesFolder}${cart.productID}.PNG">

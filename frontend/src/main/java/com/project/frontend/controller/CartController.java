@@ -9,12 +9,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.project.backend.DAO.CartDAO;
+import com.project.backend.DAO.ProductDAO;
 import com.project.backend.domain.Cart;
+import com.project.backend.domain.Product;
 
 @Controller
 public class CartController {
@@ -23,6 +25,10 @@ public class CartController {
 	private CartDAO cartDAO;
 	@Autowired  
 	private Cart cart;
+	@Autowired
+	private ProductDAO productDAO;
+	@Autowired 
+	private Product product;
 	@Autowired 
 	private HttpSession httpSession;
 	
@@ -42,21 +48,26 @@ public class CartController {
 		
 		return mv;
 	}
-
-	@RequestMapping("/cart/add")
-	public ModelAndView addToCart(@RequestParam String productName,
-			@RequestParam int price, @RequestParam String quantity)
+	@GetMapping("/cart/add/{productID}")
+	public ModelAndView addToCart(
+			@PathVariable String productID	)
 	{
 		ModelAndView mv = new ModelAndView("index");
 		String loggedInUserID = (String) httpSession.getAttribute("loggedInUserID");
-		if(loggedInUserID==null)
+		System.out.println("Session : "+loggedInUserID);
+		if(loggedInUserID=="null" || loggedInUserID==null)
 		{
 			mv.addObject("errorMessage", "Please login to add any product to cart");
 			return mv;
 		}
+		product = productDAO.get(productID);		
 		cart.setEmailID(loggedInUserID);
-		cart.setPrice(price);
-		cart.setQuantity(Integer.parseInt(quantity));
+
+		cart.setPrice(product.getPrice());
+		cart.setProductID(productID);
+		cart.setProductName(product.getName());
+		cart.setQuantity(1);
+		cart.setId();
 		if(cartDAO.save(cart))
 		{
 			mv.addObject("successMessage", "The product add to cart successfully");
