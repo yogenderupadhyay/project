@@ -29,7 +29,7 @@ public class SupplierController {
 	@RequestMapping("/Supplier/get/{id}")
 	public ModelAndView getSupplier(@RequestParam("id") String id) {
 		supplier = supplierDAO.get(id);
-		ModelAndView mv = new ModelAndView("redirect:/managesuppliers");
+		ModelAndView mv = new ModelAndView("index");
 		mv.addObject("supplier", supplier);
 		return mv;
 	}
@@ -71,17 +71,16 @@ System.out.println("saveSupplier method is calling");
 	}
 	@RequestMapping("/supplier/edit/")
 	public ModelAndView editSupplier(@RequestParam String id) {
-		ModelAndView mv = new ModelAndView("redirect:/managesuppliers");
+		ModelAndView mv = new ModelAndView("redirect:/viewsuppliers");
 		supplier = supplierDAO.get(id);
-		httpSession.setAttribute("selectedSupplier", supplier);
+		httpSession.setAttribute("supplier", supplier);
 		return mv;
 	}
 	@GetMapping("/supplier")
 	public ModelAndView getAllSuppliers() {
-		ModelAndView mv = new ModelAndView("redirect:/managesuppliers");
-		List<Supplier> supplier = supplierDAO.list();
-		httpSession.setAttribute("supplier", supplier);
-		System.out.println("sup = "+supplier);
+		ModelAndView mv = new ModelAndView("index ");
+		List<Supplier>	supplier = supplierDAO.list();
+		mv.addObject("supplier", supplier);
 		return mv;
 	}
 }

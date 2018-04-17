@@ -37,13 +37,13 @@ public class CategoryController {
 	@RequestMapping("/category/save/")
 	public ModelAndView saveCategory(@RequestParam("id") String id, @RequestParam("name") String name, @RequestParam("description") String description) 
 	{
-		ModelAndView mv = new ModelAndView("redirect:/managecategories");
+		ModelAndView mv = new ModelAndView("redirect:/addcategories");
 		category.setId(id);
 		category.setName(name);
 		category.setDescription(description);
 		if(categoryDAO.save(category))
 		{
-			mv.addObject("categorySuccessMessage", "The category created successfully");
+			mv.addObject("CategorySuccessMessage", "The category created successfully");
     	}
 		else
 		{
@@ -53,29 +53,30 @@ public class CategoryController {
 	}
 	@PutMapping("/category/update/")
 	public ModelAndView updateCategory(@ModelAttribute Category category) {
-		ModelAndView mv = new ModelAndView("index");
+		ModelAndView mv = new ModelAndView("redirect:/addcategories");
 		if (categoryDAO.update(category) == true) {
-			mv.addObject("successMessage", "The category updated successfully");
+			mv.addObject("CategorySuccessMessage", "The category updated successfully");
 		} 
 		else {
-			mv.addObject("errorMessage", "Could not update the category.");
+			mv.addObject("categorySuccessMessage", "Could not update the category.");
 		}
 		return mv;
 	}
 	@RequestMapping("/category/delete")
 	public ModelAndView deleteCategory(@RequestParam String id) {
 		System.out.println("going to delete category : " + id);
-		ModelAndView mv = new ModelAndView("redirect:/managecategories");
+		ModelAndView mv = new ModelAndView("redirect:/viewcategories");
 		if (categoryDAO.delete(id) == true) {
-			mv.addObject("SuppliersuccessMessage", "The category deleted successfully");
+			mv.addObject("CategorySuccessMessage", "The category deleted successfully");
 		} else {
-			mv.addObject("SuppliererrorMessage", "Could not delete the category.");
+			mv.addObject("CategoryErrorMessage", "Could not delete the category.");
 		}
 		return mv;
 	}
 	@GetMapping("/categories")
 	public ModelAndView getAllCategories() {
 		ModelAndView mv = new ModelAndView("index");
+		System.out.println("1");
 		List<Category> categories = categoryDAO.list();
 		mv.addObject("categories", categories);
 		return mv;
@@ -83,7 +84,7 @@ public class CategoryController {
 	@RequestMapping("/category/edit")
 	public ModelAndView editCategory(@RequestParam String id)
 	{
-		ModelAndView mv = new ModelAndView("redirect:/managecategories");
+		ModelAndView mv = new ModelAndView("redirect:/addcategories");
 		category = categoryDAO.get(id);
 		httpSession.setAttribute("selectedCategory", category);
 		return mv;

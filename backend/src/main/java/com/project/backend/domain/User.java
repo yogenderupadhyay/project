@@ -19,6 +19,7 @@ public class User {
 		private String name;
 		private String lastName;
 		private String password;
+		private String Gender;
 		private String mobile;
 		private Character role;
 		private String registeredDate;
@@ -43,11 +44,7 @@ public class User {
 		}
 		public void setGender(String gender) {
 			Gender = gender;
-		}
-		private String Gender;
-		
-		
-		
+		}	
 		public String getEmailID() {
 			return emailID;
 		}

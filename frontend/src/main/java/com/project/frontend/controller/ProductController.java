@@ -46,21 +46,27 @@ public class ProductController {
 	
 	Logger log = LoggerFactory.getLogger(ProductController.class);
 
-	@GetMapping("/product/get/{id}")
-
-	public ModelAndView getSelectedProduct(@PathVariable("id") String id, RedirectAttributes redirectAttributes) {
-		ModelAndView mv = new ModelAndView("redirect:/");
-		redirectAttributes.addFlashAttribute("selectedProduct", productDAO.get(id));
-		redirectAttributes.addFlashAttribute("isUserSelectedProduct", true);
+	@GetMapping("/productget/{id}")
+	public ModelAndView getSelectedProduct(@RequestParam ("id")String id) {
+		ModelAndView mv = new ModelAndView("index");
+		mv.addObject("selectedProduct", productDAO.get(id));
+		mv.addObject("isUserSelectedProduct", true);
 		return mv;
 	}
-
+	/*@GetMapping("/product/get/{id}")
+	public ModelAndView getSelectedProduct(@PathVariable("id") String id, RedirectAttributes redirectAttributes) {
+		ModelAndView mv = new ModelAndView("index");
+		redirectAttributes.addFlashAttribute("selectedProduct",  productDAO.get(id));
+		redirectAttributes.addFlashAttribute("isUserSelectedProduct",  true);
+		return mv;
+	}
+*/
 	@RequestMapping("/product/save/")
 	public ModelAndView saveProduct(@RequestParam("id") String id, @RequestParam("name") String name,
 			@RequestParam("description") String description, @RequestParam("price") String price,
 			@RequestParam("categoryID") String categoryID, @RequestParam("supplierID") String supplierID,
 			@RequestParam("file") MultipartFile file) {
-		ModelAndView mv = new ModelAndView("redirect:/manageproducts");
+		ModelAndView mv = new ModelAndView("redirect:/addproducts");
 		product.setId(id);
 		product.setName(name);
 		product.setDescription(description);
@@ -83,7 +89,7 @@ public class ProductController {
 
 	@PutMapping("/product/update/")
 	public ModelAndView updateProduct(@ModelAttribute Product product) {
-		ModelAndView mv = new ModelAndView("home");
+		ModelAndView mv = new ModelAndView("index");
 		if (productDAO.update(product) == true) {
 			mv.addObject("successMessage", "The product updated successfully");
 		} else {
@@ -95,7 +101,7 @@ public class ProductController {
 	@GetMapping("/product/delete")
 	public ModelAndView deleteProduct(@RequestParam String id) {
 		System.out.println("going to delete product : " + id);
-		ModelAndView mv = new ModelAndView("redirect:/manageproducts");
+		ModelAndView mv = new ModelAndView("redirect:/viewproducts");
 		if (productDAO.delete(id) == true) {
 			mv.addObject("successMessage", "The product deleted successfully");
 		} else {
@@ -106,7 +112,7 @@ public class ProductController {
 
 	@GetMapping("/product/edit")
 	public ModelAndView editProduct(@RequestParam String id) {
-		ModelAndView mv = new ModelAndView("redirect:/manageproducts");
+		ModelAndView mv = new ModelAndView("redirect:/addproducts");
 		product = productDAO.get(id);
 		httpSession.setAttribute("selectedProduct", product);
 		return mv;
@@ -114,7 +120,7 @@ public class ProductController {
 
 	@GetMapping("/products")
 	public ModelAndView getAllCategories() {
-		ModelAndView mv = new ModelAndView("home");
+		ModelAndView mv = new ModelAndView("index");
 		List<Product> categories = productDAO.list();
 		mv.addObject("products", categories);
 		return mv;
@@ -124,7 +130,7 @@ public class ProductController {
 	{
 		ModelAndView mv = new ModelAndView("index");
 		List<Product> products =  productDAO.search(searchString);
-		mv.addObject("products", products);
+		mv.addObject("selectedProduct", products);
 		mv.addObject("isUserSelectedProduct", true);
 		log.info("Number of products with search string " +searchString +  " is/are : " + products.size());
 		return mv;

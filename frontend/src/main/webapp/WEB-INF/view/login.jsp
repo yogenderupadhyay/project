@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" isELIgnored="false"
     pageEncoding="ISO-8859-1"%>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -11,6 +12,10 @@
 </head>
 <body>
 
+
+<c:if test="${(errorMessage!=null)}">
+<i class="fa fa-frown-o" style="font-size:48px;color:red">${errorMessage}</i><br>
+</c:if>
 <div class="container">
 <img src="resources/images/login.PNG" >
   <h2>Login Here</h2>
@@ -24,7 +29,10 @@
       <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="psw">
     </div>
     <div class="checkbox">
-      <label><input type="checkbox" name="remember"> Remember me</label>
+    <input  id ="rem"type="checkbox" value="on" name="remember">
+      <label for="rem"> Remember me</label>
+      
+      <input id="rem" type="hidden" value="No" name="remember">
     </div>
     <button type="submit" class="btn btn-default">Submit</button>
   </form>

@@ -24,10 +24,7 @@ public class IndexController {
 	@Autowired
 	private HttpSession httpSession;
 	
-	//C:\Users\Abbas\eclipse-workspace\Temp\ShoppingCart\src\main\webapp\resources\images
-	//private static String imageDirectory = "resources" + File.separator+ "images";
 	public static String imageDirectory="F:\\Workstation\\frontend\\src\\main\\webapp\\resources\\images\\uploads";
-	/*private static String rootPath = System.getProperty("catalina.home");*/
 	@RequestMapping("/")
 	public ModelAndView index(HttpServletRequest request) {
 		ModelAndView mv = new ModelAndView("index");
@@ -60,7 +57,7 @@ public class IndexController {
 	}
 	
 	
-	@RequestMapping("/register")
+	@RequestMapping("/signUp")
 	public ModelAndView  registration()
 	{
 		

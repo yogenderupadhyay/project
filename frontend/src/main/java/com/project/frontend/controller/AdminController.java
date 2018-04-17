@@ -35,7 +35,34 @@ public class AdminController {
 	private Product product;
 	@Autowired 
 	HttpSession httpSession;
-	@GetMapping("/managecategories")
+	
+	
+	@GetMapping("/viewcategories")
+	public ModelAndView admincClickedViewCategories() {
+		ModelAndView mv = new ModelAndView("index");
+		String loggedInUserID= (String)httpSession.getAttribute("loggedInUserID");
+
+		if(loggedInUserID==null)
+		{
+			mv.addObject("errorMessage", "Please login to do this operation");
+			return mv;
+		}
+		Boolean isAdmin =(Boolean)  httpSession.getAttribute("isAdmin");
+	 if(isAdmin ==null  || isAdmin==false)
+	 {
+		 mv.addObject("errorMessage", "You are not autheroized to do this operations.");
+		 return mv;
+	 }
+	 log.debug("starting of the method admincClickedViewCategories");
+		mv.addObject("isAdminClickeViewCategories", true);
+		List<Category> categories = categoryDAO.list();
+		httpSession.setAttribute("categories", categories);
+		log.debug("ending of the method admincClickedCategories");
+		return mv;
+	}
+	
+	
+	@GetMapping("/addcategories")
 	public ModelAndView admincClickedCategories() {
 		ModelAndView mv = new ModelAndView("index");
 		String loggedInUserID= (String)httpSession.getAttribute("loggedInUserID");
@@ -51,30 +78,17 @@ public class AdminController {
 		 mv.addObject("errorMessage", "You are not autheroized to do this operations.");
 		 return mv;
 	 }
-	 log.debug("starting of the method admincClickedCategories");
-		mv.addObject("isAdminClickedManageCategories", true);
-		List<Category> categories = categoryDAO.list();
-		httpSession.setAttribute("categories", categories);
-		log.debug("ending of the method admincClickedCategories");
+	 log.debug("starting of the method admincClickedAddCategories");
+		mv.addObject("isAdminClickedAddCategories", true);
+		log.debug("ending of the method admincClickedAddCategories");
 		return mv;
 	}
-	@GetMapping("/managesuppliers")
-	public ModelAndView admincClickedSupplier()
+	@GetMapping("/viewproducts")
+	public ModelAndView admincClickedViewProducts()
 	{
-		log.debug("starting of the method admincClickedSupplier");
+		log.debug("starting of the method admincClickedViewProducts");
 		ModelAndView mv = new ModelAndView("index");
-		mv.addObject("isAdminClickedManageSuppliers", true);
-		List<Supplier> suppliers =  supplierDAO.list();
-		httpSession.setAttribute("suppliers", suppliers);
-		log.debug("ending of the method admincClickedSupplier");
-		return mv;
-	}
-	@GetMapping("/manageproducts")
-	public ModelAndView admincClickedProducts()
-	{
-		log.debug("starting of the method admincClickedProducts");
-		ModelAndView mv = new ModelAndView("index");
-		mv.addObject("isAdminClickedManageProducts", true);
+		mv.addObject("isAdminClickedViewProducts", true);
 		 List<Category> categories = categoryDAO.list();
 		 List<Supplier> suppliers = supplierDAO.list();
 		 List<Product> products = productDAO.list();
@@ -82,6 +96,35 @@ public class AdminController {
 		 httpSession.setAttribute("suppliers", suppliers);
 		 httpSession.setAttribute("products", products);
 		 log.debug("ending of the method admincClickedProducts");
+		return mv;
+	}
+	@GetMapping("/addproducts")
+	public ModelAndView admincClickedAddProducts()
+	{
+		log.debug("starting of the method admincClickedAddProducts");
+		ModelAndView mv = new ModelAndView("index");
+		mv.addObject("isAdminClickedAddProducts", true);
+		 log.debug("ending of the method admincClickedProducts");
+		return mv;
+	}
+	@GetMapping("/viewsuppliers")
+	public ModelAndView admincClickedViewSupplier()
+	{
+		log.debug("starting of the method admincClickedViewSupplier");
+		ModelAndView mv = new ModelAndView("index");
+		mv.addObject("isAdminClickedViewSuppliers", true);
+		List<Supplier> supplier =  supplierDAO.list();
+		httpSession.setAttribute("supplier", supplier);
+		log.debug("ending of the method admincClickedSupplier");
+		return mv;
+	}
+	@GetMapping("/addsuppliers")
+	public ModelAndView admincClickedAddSupplier()
+	{
+		log.debug("starting of the method admincClickedViewSupplier");
+		ModelAndView mv = new ModelAndView("index");
+		mv.addObject("isAdminClickedAddSuppliers", true);
+		log.debug("ending of the method admincClickedSupplier");
 		return mv;
 	}
 }

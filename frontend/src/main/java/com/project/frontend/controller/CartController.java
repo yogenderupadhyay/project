@@ -74,7 +74,7 @@ public class CartController {
 		}
 		else
 		{
-			mv.addObject("errorMessage", "Could not add the product to cart..please try after some time");
+			mv.addObject("cartUnableToLoadError", "Could not add the product to cart..please try after some time");
 		}
 		return mv;
 	}

@@ -27,27 +27,27 @@ color: white;
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href=" "><img src="resources/images/logo.PNG" alt="logo" height="50px" width="50px"></a>
-      <a class="navbar-brand" href=" ">SHOPPING BAZAR</a>
+      <a class="navbar-brand" href=""><img src="resources/images/logo.PNG" alt="logo" height="50px" width="50px"></a>
+      <a class="navbar-brand" href="">SHOPPING BAZAR</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
      <form class="navbar-form navbar-left" action="search">
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Search">
+        <input type="text" class="form-control" name="searchString" placeholder="Search">
       </div>
       <button type="submit" class="btn btn-default">Submit</button>
     </form>
 
       <ul class="nav navbar-nav navbar-right" style="color:white;">
       <c:if test="${(loggedInUserID==null)}">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="signUp"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
         <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> login</a></li>
         </c:if>
         <c:if test="${(loggedInUserID!=null)}">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span>  ${welcomeMessage}</a></li>
+        <li><a href="userHome"><span class="glyphicon glyphicon-user active"></span>${welcomeMessage}</a></li>
        <li><a href="logout"><span class="glyphicon glyphicon-log-out"></span> logout</a></li>
         </c:if>
-        <li><a href="mycart"><span class="glyphicon glyphicon-shopping-cart"></span> cart(${size})</a></li>
+        <li><a href="mycart"><span class="glyphicon glyphicon-shopping-cart"></span>cart <span class="badge">${size}</span></a></li>
       </ul>
     </div>
   </div>

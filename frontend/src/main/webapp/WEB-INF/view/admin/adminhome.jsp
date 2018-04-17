@@ -8,23 +8,44 @@
 
 <title>index</title>
 <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/STYLESHEET.css"/>" >
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 </head>
 <body>
-		<ul id="right">
-	  			<li><a href="managecategories"> Manage Categories</a></li> 
-	  			<li><a href="managesuppliers"> Manage Suppliers</a></li> 
-	  			<li><a href="manageproducts">Manage Products</a> </li> 
-			</ul>
-	<br>
-
-	<c:if test="${isAdminClickedManageCategories==true }">
-		<jsp:include page="category.jsp"></jsp:include>
+		<div class="container-fluid">
+		<div class="row">
+    <div class="col-xs-3 "">
+    <nav class="navbar navbar-inverse">
+   <ul class="nav">
+<a href="addcategories" class="center"></a>
+ <li><a href="viewcategories" >Manage Category</a></li>
+    <li><a href="viewsuppliers"> Manage Suppliers</a></li>
+    <li><a href="viewproducts"> Manage Products</a></li>
+ </ul>
+</nav>
+    </div> 
+   
+    <div class="col-xs-9 success" style="background-color:lavenderblush;">
+    <c:if test="${isAdminClickedAddCategories==true }">
+		<jsp:include page="AddCategory.jsp"></jsp:include>
 	</c:if>
-	<c:if test="${isAdminClickedManageSuppliers==true }">
-		<jsp:include page="supplier.jsp"></jsp:include>
+	<c:if test="${isAdminClickeViewCategories==true }">
+		<jsp:include page="ViewCategory.jsp"></jsp:include>
 	</c:if>
-	<c:if test="${isAdminClickedManageProducts==true }">
-		<jsp:include page="product.jsp"></jsp:include>
+	 <c:if test="${isAdminClickedAddProducts==true }">
+		<jsp:include page="AddProduct.jsp"></jsp:include>
 	</c:if>
+	<c:if test="${isAdminClickedViewProducts==true }">
+		<jsp:include page="ViewProducts.jsp"></jsp:include>
+	</c:if>
+	<c:if test="${isAdminClickedAddSuppliers==true }">
+		<jsp:include page="AddSupplier.jsp"></jsp:include>
+	</c:if>
+	<c:if test="${isAdminClickedViewSuppliers==true }">
+		<jsp:include page="ViewSuppliers.jsp"></jsp:include>
+	</c:if></div>
+  </div>
+  </div>
 </body>
 </html>

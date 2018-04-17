@@ -12,34 +12,34 @@
 </head>
 <body>
 <%@include file="header.jsp" %>
-	<jsp:include page="product_menu.jsp"></jsp:include>
-	<c:if test="${isUserSelectedProduct==true}">
+	<jsp:include page="product_menu.jsp"></jsp:include>${isUserSelectedProduct}
+	<c:if test="${(cartUnableToLoadError!=null) or (isUserSelectedProduct==true)}">
 		<jsp:include page="selected_product.jsp"></jsp:include>
+		<%System.out.println("Yes Im IN"); %>
 	</c:if>
-<c:if test="${(errorMessage!=null)}">
-       <i class="fa fa-frown-o" style="font-size:48px;color:red">${errorMessage}</i><br>
+<c:if test="${((errorMessage!=null) or(isUserClickedLogin==true))and(loggedInUserID==null)}">
        <jsp:include page="login.jsp"></jsp:include>
   </c:if>
   <c:if test="${isUserClickedMyCart==true}">
 		<jsp:include page="cart.jsp"></jsp:include>
 	</c:if>
-<c:if test="${isAdmin==true}">
+<c:if test="${(isAdmin==true)and ((isUserSelectedProduct!=true))}">
 	<jsp:include page="admin/adminhome.jsp"></jsp:include>
 
 	</c:if>
-	<c:if test="${isUserClickedMyCart==true}">
+	<%-- <c:if test="${isUserClickedMyCart==true}">
 
 		<jsp:include page="cart.jsp"></jsp:include>
 
-	</c:if>
+	</c:if> --%>
 	<div>
-	<c:if test="${isUserClickedLogin==true}">
+	<%-- <c:if test="${isUserClickedLogin==true}">
 		<jsp:include page="login.jsp"></jsp:include>
-	</c:if>
+	</c:if> --%>
 	<c:if test="${isUserClickedRegister==true}">
 	<jsp:include page="registration.jsp"></jsp:include>
-		<%@ include file="registration.jsp" %>
 	</c:if>	
+	
 	</div>
 	
 </body>
