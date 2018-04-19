@@ -15,7 +15,7 @@
 <body>
 		<div class="container-fluid">
 		<div class="row">
-    <div class="col-xs-3 "">
+    <div class="col-xs-3 ">
     <nav class="navbar navbar-inverse">
    <ul class="nav">
 <a href="addcategories" class="center"></a>

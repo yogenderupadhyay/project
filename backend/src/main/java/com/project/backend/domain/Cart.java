@@ -25,11 +25,15 @@ public class Cart {
 	private int quantity;
 	private String productID;
 	
+	
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getProductID() {
 		return productID;
 	}
-	public void setProductID(String productID) {
-		this.productID = productID;
+	public void setProductID(String product) {
+		this.productID = product;
 	}
 	public int getTotal() {
 		return total;

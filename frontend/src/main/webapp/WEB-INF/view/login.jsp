@@ -11,15 +11,13 @@
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 </head>
 <body>
-
-
 <c:if test="${(errorMessage!=null)}">
 <i class="fa fa-frown-o" style="font-size:48px;color:red">${errorMessage}</i><br>
 </c:if>
 <div class="container">
 <img src="resources/images/login.PNG" >
   <h2>Login Here</h2>
-  <form action="validate">
+  <form action="validate" method="post">
     <div class="form-group">
       <label for="email">Email:</label>
       <input type="email" class="form-control" id="email" placeholder="Enter email" name="uname">

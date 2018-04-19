@@ -56,6 +56,15 @@ public class IndexController {
 		
 	}
 	
+	@RequestMapping("/home")
+	public ModelAndView  home()
+	{
+		
+		ModelAndView mv = new ModelAndView("index");
+		mv.addObject("isUserClickedHome", true);
+		return mv;
+		
+	}
 	
 	@RequestMapping("/signUp")
 	public ModelAndView  registration()

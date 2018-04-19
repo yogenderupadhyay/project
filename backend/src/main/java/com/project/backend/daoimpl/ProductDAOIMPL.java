@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.project.backend.DAO.ProductDAO;
+import com.project.backend.domain.Category;
 import com.project.backend.domain.Product;
 
 @Transactional
@@ -22,6 +23,10 @@ public class ProductDAOIMPL implements ProductDAO {
 	public boolean save(Product product) {
 
 		try {
+			List<Product> products = sessionFactory.getCurrentSession().createQuery("from Product").list();
+			int count = products.size();
+			String str="C_00"+ count +"-"+ product.getId();
+			product.setId(str);
 			sessionFactory.getCurrentSession().save(product);
 			return true;
 		} catch (HibernateException e) {
@@ -42,7 +47,6 @@ public class ProductDAOIMPL implements ProductDAO {
 
 	public Product get(String id) {
 		Product p = sessionFactory.getCurrentSession().get(Product.class, id);
-		System.out.println("Inside get : " + p.getName());
 		return p;
 	}
 
@@ -69,7 +73,7 @@ public class ProductDAOIMPL implements ProductDAO {
 
 	public List<Product> search(String searchString) {
 
-		String hql = "from Product where description like '%" + searchString + "%'";
+		String hql = "from Product where DESCRIPTION like '%" + searchString + "%'" +"or name like '%"+searchString+"%'";
 		return sessionFactory.getCurrentSession().createQuery(hql).list();
 	}
 

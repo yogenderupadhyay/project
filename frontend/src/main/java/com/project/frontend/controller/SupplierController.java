@@ -29,14 +29,14 @@ public class SupplierController {
 	@RequestMapping("/Supplier/get/{id}")
 	public ModelAndView getSupplier(@RequestParam("id") String id) {
 		supplier = supplierDAO.get(id);
-		ModelAndView mv = new ModelAndView("index");
+		ModelAndView mv = new ModelAndView("redirect:/addsuppliers");
 		mv.addObject("supplier", supplier);
 		return mv;
 	}
 	@RequestMapping("/supplier/save/")
 	public ModelAndView saveSupplier(@RequestParam("id") String id, @RequestParam("name") String name, @RequestParam("address") String address) {
 System.out.println("saveSupplier method is calling");
-		ModelAndView mv = new ModelAndView("redirect:/managesuppliers");
+		ModelAndView mv = new ModelAndView("redirect:/viewsuppliers");
 		supplier.setId(id);
 		supplier.setName(name);
 		supplier.setAddress(address);
@@ -61,7 +61,7 @@ System.out.println("saveSupplier method is calling");
 	}
 	@RequestMapping("/supplier/delete/")
 	public ModelAndView deleteSupplier(@RequestParam String id) {
-		ModelAndView mv = new ModelAndView("redirect:/managesuppliers");
+		ModelAndView mv = new ModelAndView("redirect:/viewsuppliers");
 		if (supplierDAO.delete(id) == true) {
 			mv.addObject("supplierSuccessMessage", "The supplier deleted successfully");
 		} else {

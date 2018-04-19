@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-
 import com.project.backend.DAO.CategoryDAO;
 import com.project.backend.domain.Category;
 
@@ -19,8 +18,16 @@ public class CategoryDAOIMPL implements CategoryDAO {
 	private SessionFactory sessionFactory;
 	@Autowired
 	private Category category;
+	@Autowired
+	private Category categoryDAO;
+	
+	
 	public boolean save(Category category) {
 		try {
+			List<Category> categories = sessionFactory.getCurrentSession().createQuery("from Category").list();
+			int count = categories.size();
+			String str="C_00"+ count +"-"+ category.getId();
+			category.setId(str);
 			sessionFactory.getCurrentSession().saveOrUpdate(category);
 			return true;
 		} catch (HibernateException e) {

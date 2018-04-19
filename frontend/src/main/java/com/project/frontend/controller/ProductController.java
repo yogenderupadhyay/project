@@ -46,7 +46,7 @@ public class ProductController {
 	
 	Logger log = LoggerFactory.getLogger(ProductController.class);
 
-	@GetMapping("/productget/{id}")
+	@GetMapping("/productget{id}")
 	public ModelAndView getSelectedProduct(@RequestParam ("id")String id) {
 		ModelAndView mv = new ModelAndView("index");
 		mv.addObject("selectedProduct", productDAO.get(id));
@@ -121,8 +121,8 @@ public class ProductController {
 	@GetMapping("/products")
 	public ModelAndView getAllCategories() {
 		ModelAndView mv = new ModelAndView("index");
-		List<Product> categories = productDAO.list();
-		mv.addObject("products", categories);
+		List<Product> products = productDAO.list();
+		mv.addObject("products", products);
 		return mv;
 	}
 	@GetMapping("search")
@@ -130,8 +130,12 @@ public class ProductController {
 	{
 		ModelAndView mv = new ModelAndView("index");
 		List<Product> products =  productDAO.search(searchString);
-		mv.addObject("selectedProduct", products);
+		mv.addObject("selectedProducts", products);
 		mv.addObject("isUserSelectedProduct", true);
+		if(products.size()<=0) {
+			System.out.println("***********************************************************************************************");
+			mv.addObject("searchError", "Product not found try again with valid characters");
+		}
 		log.info("Number of products with search string " +searchString +  " is/are : " + products.size());
 		return mv;
 	}

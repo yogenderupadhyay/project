@@ -47,7 +47,7 @@ public class CategoryController {
     	}
 		else
 		{
-			mv.addObject("categoryErrorMessage", "Coulc not able to create category.  please contact admin");
+			mv.addObject("categoryErrorMessage", "Could not able to create category.Please try after sometime.");
 		}
 		return mv;
 	}

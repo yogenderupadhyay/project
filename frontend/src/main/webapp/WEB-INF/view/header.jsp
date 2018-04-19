@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" isELIgnored="false"
     pageEncoding="ISO-8859-1"%>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+    <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+    <spring:url var="images" value="/resources/images" />
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -27,7 +29,7 @@ color: white;
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href=""><img src="resources/images/logo.PNG" alt="logo" height="50px" width="50px"></a>
+      <a class="navbar-brand" href=""><img src="${images}/logo.PNG" alt="logo" height="50px" width="50px"></a>
       <a class="navbar-brand" href="">SHOPPING BAZAR</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
@@ -39,6 +41,7 @@ color: white;
     </form>
 
       <ul class="nav navbar-nav navbar-right" style="color:white;">
+      <li><a href="home"><span class="glyphicon glyphicon-home"></span> Home</a></li>
       <c:if test="${(loggedInUserID==null)}">
         <li><a href="signUp"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
         <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> login</a></li>

@@ -22,7 +22,12 @@
  </ul>
   </div>
 </nav>
-	${CategorySuccessMessage} ${categoryErrorMessage}
+<c:if test="${(CategorySuccessMessage!=null)}">
+<i class="alert alert-success">${CategorySuccessMessage}</i><br>
+</c:if>
+<c:if test="${(categoryErrorMessage!=null)}">
+<i class="alert alert-danger">${categoryErrorMessage}</i><br>
+</c:if>
 	<form action="category/save/" method="post">
     <div class="form-group">
       <label for="id">ID:</label>

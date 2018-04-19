@@ -48,33 +48,33 @@ public class CartController {
 		
 		return mv;
 	}
-	@GetMapping("/cart/add/{productID}")
+	@GetMapping("/cartadd{productID}")
 	public ModelAndView addToCart(
 			@PathVariable String productID	)
 	{
 		ModelAndView mv = new ModelAndView("index");
 		String loggedInUserID = (String) httpSession.getAttribute("loggedInUserID");
-		System.out.println("Session : "+loggedInUserID);
 		if(loggedInUserID=="null" || loggedInUserID==null)
 		{
 			mv.addObject("errorMessage", "Please login to add any product to cart");
 			return mv;
 		}
-		product = productDAO.get(productID);		
+		String pID = product.getId();		
 		cart.setEmailID(loggedInUserID);
-
 		cart.setPrice(product.getPrice());
-		cart.setProductID(productID);
+		cart.setProductID(pID);
 		cart.setProductName(product.getName());
 		cart.setQuantity(1);
 		cart.setId();
 		if(cartDAO.save(cart))
 		{
 			mv.addObject("successMessage", "The product add to cart successfully");
+			mv.addObject("isUserClickedMyCart", true);
 		}
 		else
 		{
 			mv.addObject("cartUnableToLoadError", "Could not add the product to cart..please try after some time");
+			mv.addObject("isUserSelectedProduct", true);
 		}
 		return mv;
 	}

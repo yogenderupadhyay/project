@@ -9,19 +9,16 @@
 </head>
 <body>
 
+${searchError}
 <img alt="" src="${selectedProductImage}"> <br>
-
+<c:forEach var="selectedProduct" items="${selectedProducts}">
 ${selectedProduct.id}
 <img alt="" src="resources/images/${selectedProduct.id}.PNG">
 product name: ${selectedProduct.name} <br>
 price : ${selectedProduct.price} <br>
 Description : ${selectedProduct.description} <br>
-<a href="cart/add/?id=${selectedProduct.id}">Add to Cart</a>
-<c:forEach var="product" items="${products}">
-${product.name}
-${product.description}
-${product.price}
-<img alt="" src="resources/images/${product.id}.PNG">
+<a href="cartadd?id=${selectedProduct.id}">Add to Cart</a>
+<h1>err ${searchError}</h1>
 </c:forEach>
 </body>
 </html>

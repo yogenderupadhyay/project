@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.project.backend.DAO.SupplierDAO;
+import com.project.backend.domain.Category;
 import com.project.backend.domain.Supplier;
 
 @Transactional
@@ -20,6 +21,10 @@ public class SupplierDAOIMPL implements SupplierDAO {
 	private Supplier supplier;
 	public boolean save(Supplier supplier) {
 		try {
+			List<Supplier> suppliers = sessionFactory.getCurrentSession().createQuery("from Supplier").list();
+			int count = suppliers.size();
+			String str="S_00"+ count +"-"+ supplier.getId();
+			supplier.setId(str);
 			sessionFactory.getCurrentSession().saveOrUpdate(supplier);
 			return true;
 		} catch (HibernateException e) {

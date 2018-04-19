@@ -29,6 +29,8 @@ public class UserDAOIMPL implements UserDAO {
 		try {
 			user.setRole('C');
 			user.setRegisteredDate(new Date(System.currentTimeMillis()) + "");
+			String str=user.getEmailID()+"@sb.com";
+			user.setEmailID(str);
 			sessionFactory.getCurrentSession().save(user);
 			System.out.println("save");
 			return true;

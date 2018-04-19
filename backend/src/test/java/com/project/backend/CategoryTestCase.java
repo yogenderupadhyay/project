@@ -34,7 +34,7 @@ public class CategoryTestCase {
 	public void saveCategoryTestCase()
 	{
 		category = new Category();
-		category.setId("MolbileCategory001");
+		category.setId("MolbileCategory");
 		category.setName("Mobile");
 		category.setDescription("This is Mobile category");
 		boolean status = categoryDAO.save(category);
@@ -43,7 +43,7 @@ public class CategoryTestCase {
 	@Test
 	public void updateCategoryTestCase()
 	{
-		category.setId("Category001");
+		category.setId("WoMenCategory");
 		category.setName("Mobile");
 		category.setDescription("This is new mobile category");
 		boolean status = categoryDAO.update(category);
@@ -52,7 +52,7 @@ public class CategoryTestCase {
 	@Test
 	public void getCategorySuccessTestCase()
 	{
-		category = categoryDAO.get("ChildrenCategory001");
+		category = categoryDAO.get("WoMenCategory001");
 		assertNotNull("get category test case", category);
 	}
 	@Test
@@ -61,12 +61,12 @@ public class CategoryTestCase {
 		category = categoryDAO.get("abc");
 		assertNull("get category test case", category);
 	}
-	@Test
+	/*@Test
 	public void deleteCategorySuccessTestCase()
 	{
 		boolean status = categoryDAO.delete("Category001");
 		assertEquals("delete category succss test case", true, status);
-	}
+	}*/
 	@Test
 	public void deleteCategoryFailureTestCase()
 	{

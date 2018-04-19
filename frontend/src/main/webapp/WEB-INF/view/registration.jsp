@@ -19,8 +19,8 @@
       <input type="text" class="form-control" id="LName" placeholder="Enter Last Name" name="LName">
     </div>
     <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" placeholder="Enter email" name="uname">
+      <label for="uname">Username:</label>
+      <input type="text" class="form-control" id="uname" placeholder="Enter Username must be less than 43 characters" name="uname"><B>@sb.com</B>
     </div>
     <div class="form-group">
       <label for="pwd">Password:</label>
