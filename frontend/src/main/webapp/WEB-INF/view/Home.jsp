@@ -22,8 +22,8 @@
 <tr><td><img alt="" src="resources/images/${product.id}.PNG"><br>
 
 ${product.name}<br>
-RS. ${product.price}<br>
-<a href="${root}/cartadd/${selectedProduct.id}">Add to Cart</a></td></tr></table></div>
+<i class="fa fa-inr"> ${product.price}</i><br>
+<a href="${root}/cartadd/${product.id}">Add to Cart</a></td></tr></table></div>
 </c:forEach>
 </div>
 

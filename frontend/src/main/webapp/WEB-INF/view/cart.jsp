@@ -13,12 +13,19 @@
 </head>
 <body>
 
-<a href="${root}/buy"> BUY</a>  <br>
+<a href="${root}/checkout"> Checkout</a>  <br>
+<div class="row">
 <c:forEach var="cart" items="${cartList}">
-<img alt="" src=" ${ImagesFolder}${cart.productID}.PNG">
-Name  : <input type="text" name="price" value="${cart.productName}"> <br>
-price : <input type="text" name="price" value="${cart.price}"> <br>
-quantity  : <input type="text" name="price" value="${cart.quantity}"> <br>
+ <div class="col-xs-3">
+ <table class="table table-condensed table-hover" style="border-width:0;">
+<tr><td><img alt="" src=" ${ImagesFolder}${cart.productID}.PNG"><br>
+${cart.productName}<br>
+<i class="fa fa-inr"> ${cart.price}</i><br>
+qty: ${cart.quantity}<br>
+<a href="${root}/remove/${cart.id}">REMOVE CART</a></td></tr></table>
+</div>
+
 </c:forEach>
+</div>
 </body>
 </html>

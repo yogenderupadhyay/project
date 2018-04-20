@@ -28,7 +28,7 @@
 						class="caret"></span></a>
 					<ul class="dropdown-menu" role="menu">
 						<c:forEach items="${category.products}" var="product">
-							<li><a href="${root}/product/get/${product.id}">${product.name}</a></li>
+							<li><a href="${root}/productget/${product.id}">${product.name}</a></li>
 						</c:forEach>
 					</ul></li>
 			</c:forEach>

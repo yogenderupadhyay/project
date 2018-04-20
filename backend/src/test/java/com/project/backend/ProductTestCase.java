@@ -43,7 +43,7 @@ private static AnnotationConfigApplicationContext context;
 	  boolean status = 	productDAO.save(product);
 	  assertEquals("save product test case", true, status);
 	}*/
-	@Test
+	/*@Test
 	public void updateProductTestCase()
 	{
 		product.setId("Lenevo-002");
@@ -51,11 +51,11 @@ private static AnnotationConfigApplicationContext context;
 		product.setDescription("This is not Lenevo product");
 		boolean status = productDAO.update(product);
 		assertEquals("update test case", true,status );
-	}
+	}*/
 	@Test
 	public void getProductSuccessTestCase()
 	{
-	product= productDAO.get("Lenevo-001");
+	product= productDAO.get("C_000-mobile");
 	assertNotNull("get product test case", product.getName());
 	}
 	/*@Test
@@ -76,11 +76,11 @@ private static AnnotationConfigApplicationContext context;
 	boolean status =	productDAO.delete("Lenevo-001");
 	assertEquals("delete product failure test case" , false, status);
 	}*/
-	@Test
+	/*@Test
 	public void getAllProductsTestCase()
 	{
 	List<Product>	products = productDAO.list();
 	assertEquals("get all products " , 3, products.size() );
-	}
+	}*/
 
 }

@@ -46,8 +46,8 @@ public class ProductDAOIMPL implements ProductDAO {
 	}
 
 	public Product get(String id) {
-		Product p = sessionFactory.getCurrentSession().get(Product.class, id);
-		return p;
+		return sessionFactory.getCurrentSession().get(Product.class, id);
+		
 	}
 
 	public boolean delete(String id) {

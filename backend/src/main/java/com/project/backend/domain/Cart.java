@@ -17,15 +17,23 @@ import org.springframework.stereotype.Component;
 @Table
 public class Cart {
 	@Id
-	/*@GeneratedValue(strategy=GenerationType.AUTO)*/
+/*	@GeneratedValue*/
 	private int id;
 	private String emailID;
 	private String productName;
 	private int price;
 	private int quantity;
 	private String productID;
+	private char status;
+	@Transient
+	private int total;
 	
-	
+	public char getStatus() {
+		return status;
+	}
+	public void setStatus(char status) {
+		this.status = status;
+	}
 	public void setId(int id) {
 		this.id = id;
 	}
@@ -41,8 +49,6 @@ public class Cart {
 	public void setTotal(int total) {
 		this.total = total;
 	}
-	@Transient
-	private int total;
 	public int getId() {
 		return id;
 	}

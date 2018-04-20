@@ -45,7 +45,9 @@ public class IndexController {
 	    		"images"+File.separator ;	
 
 	    httpSession.setAttribute("imageFolder", imageFolder);
-		/*httpSession.setAttribute("ImageFolder", rootpath+File.pathSeparator+imageDirectory+File.pathSeparator);*/
+	    List<Product> products = productDAO.list();
+		mv.addObject("products", products);
+		mv.addObject("isUserClickedHome", true);
 		return mv;
 		
 	}

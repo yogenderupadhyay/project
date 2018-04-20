@@ -46,15 +46,14 @@ public class ProductController {
 	
 	Logger log = LoggerFactory.getLogger(ProductController.class);
 	
-	@GetMapping("/product/get/{id}")
-	public ModelAndView getSelectedProduct(@PathVariable("id") String id, RedirectAttributes redirectAttributes) {
+	@GetMapping("/productget/{product.id}")
+	public ModelAndView getSelectedProduct(@PathVariable("product.id") String id, RedirectAttributes redirectAttributes) {
 		log.info("Search started");
 		ModelAndView mv = new ModelAndView("index");
 		 product =  productDAO.get(id);
-		redirectAttributes.addFlashAttribute("selectedProducts",  product);
-		redirectAttributes.addFlashAttribute("isUserSelectedProduct",  true);
+		mv.addObject("selectedProducts",  product);
+		mv.addObject("isUserSelectedProduct",  true);
 		mv.addObject("getProduct", true);
-		log.info("Search End");
 		return mv;
 	}
 

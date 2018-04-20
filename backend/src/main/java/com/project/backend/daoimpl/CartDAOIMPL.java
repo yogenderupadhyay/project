@@ -13,6 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.project.backend.DAO.CartDAO;
 import com.project.backend.domain.Cart;
+import com.project.backend.domain.Category;
 
 @Transactional
 @Repository("cartDAO")
@@ -21,8 +22,9 @@ public class CartDAOIMPL implements CartDAO {
 	private SessionFactory sessionFactory;
 	@Autowired
 	private Cart cart;
-	
+
 	Logger log = LoggerFactory.getLogger(CartDAOIMPL.class);
+
 	public boolean save(Cart cart) {
 		try {
 			sessionFactory.getCurrentSession().save(cart);
@@ -32,6 +34,7 @@ public class CartDAOIMPL implements CartDAO {
 			return false;
 		}
 	}
+
 	public boolean update(Cart cart) {
 		try {
 			sessionFactory.getCurrentSession().update(cart);
@@ -41,13 +44,15 @@ public class CartDAOIMPL implements CartDAO {
 			return false;
 		}
 	}
-	public Cart get(String id) {
+
+	public Cart get(int id) {
 		return sessionFactory.getCurrentSession().get(Cart.class, id);
 	}
-	public boolean delete(String id) {
+	public boolean delete(int id) {
 		try {
 			cart = get(id);
-			
+			System.out.println(cart);
+
 			if (cart == null) {
 				System.out.println("delete f");
 				return false;
@@ -61,25 +66,40 @@ public class CartDAOIMPL implements CartDAO {
 			return false;
 		}
 	}
+
+	public List<Cart> list(String emailID, char status) {
+		return sessionFactory.getCurrentSession().createCriteria(Cart.class)
+				.add(Restrictions.eq("emailID", emailID))
+				.add(Restrictions.eq("status", status))
+				.list();
+	}
 	public List<Cart> list(String emailID) {
 		return sessionFactory.getCurrentSession().createCriteria(Cart.class)
-				.add(Restrictions.eq("emailID", emailID)).list();
+				.add(Restrictions.eq("emailID", emailID))
+				.list();
 	}
+	public boolean update(String productID, int qty) {
+		log.debug("Starting of the method update");
+		String hql = "update Cart set quantity = '"+qty+"' where productID='" + productID + "'";
+		try {
+			sessionFactory.getCurrentSession().createQuery(hql).executeUpdate();
+			log.debug("Ending of the method update");
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
+	}
+
 	public boolean update(String emailID) {
 		log.debug("Starting of the method update");
-		log.debug("Goiig to place order of "  + emailID);
-		String hql = "update Cart set status = 'O' where emailid='" +
-				emailID +"'";
-		
-		log.info("The given query : " + hql);
-		try
-		{
-		sessionFactory.getCurrentSession().createQuery(hql).executeUpdate();
-		log.debug("Ending of the method update");
-		return true;
-		}
-		catch (Exception e) {
+		log.debug("Going to place order of " + emailID);
+		String hql = "update Cart set status = 'O' where emailid='" + emailID + "'";
+		try {
+			sessionFactory.getCurrentSession().createQuery(hql).executeUpdate();
+			log.debug("Ending of the method update");
+			return true;
+		} catch (Exception e) {
 			return false;
-		}	
+		}
 	}
 }

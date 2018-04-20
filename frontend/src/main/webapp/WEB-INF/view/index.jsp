@@ -32,7 +32,6 @@
 	<c:if
 		test="${(cartUnableToLoadError!=null) or (isUserSelectedProduct==true)}">
 		<jsp:include page="selected_product.jsp"></jsp:include>
-		<%System.out.println("Yes working"); %>
 	</c:if>
 	<c:if
 		test="${((errorMessage!=null) or(isUserClickedLogin==true))and(loggedInUserID==null)}">

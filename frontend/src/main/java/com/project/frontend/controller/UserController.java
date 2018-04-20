@@ -54,7 +54,8 @@ public class UserController {
 			httpSession.setAttribute("welcomeMessage", user.getName());
 			httpSession.setAttribute("loggedInUserID", user.getEmailID());
 			httpSession.setAttribute("isLoggedIn", true);
-			List<Cart> carts = cartDAO.list(user.getEmailID());
+			List<Cart> carts = cartDAO.list(user.getEmailID(),'N');
+			List<Cart> orders = cartDAO.list(user.getEmailID(),'O');
 			httpSession.setAttribute("size", carts.size());
 			httpSession.setAttribute("carts", carts);
 			if (user.getRole() == 'A')
@@ -124,7 +125,7 @@ public class UserController {
 			 httpSession.setAttribute("welcomeMessage", user.getName());
 				httpSession.setAttribute("loggedInUserID", user.getEmailID());
 				httpSession.setAttribute("isLoggedIn", true);
-				List<Cart> carts = cartDAO.list(user.getEmailID());
+				List<Cart> carts = cartDAO.list(user.getEmailID(),'N');
 				httpSession.setAttribute("size", carts.size());
 				httpSession.setAttribute("carts", carts);
 			}

@@ -13,19 +13,23 @@
 		<i class="alert alert-danger">${searchError}</i>
 </c:if>
 <c:if test="${getProduct==true }">
+<div class="row">
+<div class="col-xs-3">
 <table class="table">
 <tr>
 <td>
 ${selectedProduct.id}
 <img alt="" src="resources/images/${selectedProduct.id}.PNG"></td>
 </tr>
-<tr>
-<td>product name: ${selectedProducts.name}</td>
-<td>price : ${selectedProducts.price}</td>
-<td>Description : ${selectedProducts.description}</td>
-<td><a href="${root}/cartadd/${selectedProduct.id}">Add to Cart</a></td>
+<tr><td>${selectedProducts.name}<br>
+<i class="fa fa-inr"> ${selectedProducts.price}</i><br>
+<detail>
+<summary>show more</summary>
+<p> ${selectedProducts.description}</p>
+</detail>
+<a href="${root}/cartadd/${selectedProducts.id}">Add to Cart</a></td>
 </tr>
-</table>
+</table></div></div>
 </c:if>
 <c:if test="${searchProducts==true}">
 <div class="row">
@@ -35,7 +39,8 @@ ${selectedProduct.id}
  <table class="table table-condensed table-hover">
 <tr><td><% i=i+1; %></td><td><img alt="" src="resources/images/${selectedProduct.id}.PNG">
 ${selectedProduct.name} <br>
-Rs. ${selectedProduct.price} <br>
+
+<i class="fa fa-inr">${selectedProduct.price}</i><br>
 ${selectedProduct.description} <br>
 <a href="${root}/cartadd/${selectedProduct.id}">Add to Cart</a></td></tr></table></div>
 </c:forEach></div>
