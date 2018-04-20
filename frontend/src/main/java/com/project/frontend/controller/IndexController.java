@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.project.backend.DAO.CategoryDAO;
+import com.project.backend.DAO.ProductDAO;
 import com.project.backend.domain.Category;
+import com.project.backend.domain.Product;
 
 import jdk.nashorn.internal.ir.RuntimeNode.Request;
 
@@ -21,6 +23,8 @@ import jdk.nashorn.internal.ir.RuntimeNode.Request;
 public class IndexController {
 	@Autowired
 	private CategoryDAO categoryDAO;
+	@Autowired
+	private ProductDAO productDAO;
 	@Autowired
 	private HttpSession httpSession;
 	
@@ -61,6 +65,8 @@ public class IndexController {
 	{
 		
 		ModelAndView mv = new ModelAndView("index");
+		List<Product> products = productDAO.list();
+		mv.addObject("products", products);
 		mv.addObject("isUserClickedHome", true);
 		return mv;
 		

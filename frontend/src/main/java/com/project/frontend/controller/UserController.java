@@ -95,7 +95,6 @@ public class UserController {
 		user.setdOB(dOB);
 		user.setMobile(mobile);
 		user.setGender(gender);
-		System.out.println("qwerty");
 		if(userDAO.save(user)) {
 			
 			mv.addObject("registrationSuccessMessage", user.getName()+"Successfully Registered");

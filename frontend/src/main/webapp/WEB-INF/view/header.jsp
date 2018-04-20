@@ -1,8 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" isELIgnored="false"
     pageEncoding="ISO-8859-1"%>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-    <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
-    <spring:url var="images" value="/resources/images" />
+    <c:set var="root" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -29,28 +28,28 @@ color: white;
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href=""><img src="${images}/logo.PNG" alt="logo" height="50px" width="50px"></a>
-      <a class="navbar-brand" href="">SHOPPING BAZAR</a>
+      <a class="navbar-brand" href="${root}/"><img src="${images}/logo.PNG" alt="logo" height="50px" width="50px"></a>
+      <a class="navbar-brand" href="${root}/">SHOPPING BAZAR</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
-     <form class="navbar-form navbar-left" action="search">
+     <form class="navbar-form navbar-left" action="${root}/search">
       <div class="form-group">
-        <input type="text" class="form-control" name="searchString" placeholder="Search">
+        <input type="text" class="form-control" name="searchString" placeholder="Search" required>
       </div>
       <button type="submit" class="btn btn-default">Submit</button>
     </form>
 
       <ul class="nav navbar-nav navbar-right" style="color:white;">
-      <li><a href="home"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+      <li><a href="${root}//home"><span class="glyphicon glyphicon-home"></span> Home</a></li>
       <c:if test="${(loggedInUserID==null)}">
-        <li><a href="signUp"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> login</a></li>
+        <li><a href="${root}/signUp"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="${root}/login"><span class="glyphicon glyphicon-log-in"></span> login</a></li>
         </c:if>
         <c:if test="${(loggedInUserID!=null)}">
-        <li><a href="userHome"><span class="glyphicon glyphicon-user active"></span>${welcomeMessage}</a></li>
-       <li><a href="logout"><span class="glyphicon glyphicon-log-out"></span> logout</a></li>
+        <li><a href="${root}/userHome"><span class="glyphicon glyphicon-user active"></span>${welcomeMessage}</a></li>
+       <li><a href="${root}/logout"><span class="glyphicon glyphicon-log-out"></span> logout</a></li>
         </c:if>
-        <li><a href="mycart"><span class="glyphicon glyphicon-shopping-cart"></span>cart <span class="badge">${size}</span></a></li>
+        <li><a href="${root}/mycart"><span class="glyphicon glyphicon-shopping-cart"></span>cart <span class="badge">${size}</span></a></li>
       </ul>
     </div>
   </div>

@@ -45,28 +45,26 @@ public class ProductController {
 	FileUtil fileUtil;
 	
 	Logger log = LoggerFactory.getLogger(ProductController.class);
-
-	@GetMapping("/productget{id}")
-	public ModelAndView getSelectedProduct(@RequestParam ("id")String id) {
-		ModelAndView mv = new ModelAndView("index");
-		mv.addObject("selectedProduct", productDAO.get(id));
-		mv.addObject("isUserSelectedProduct", true);
-		return mv;
-	}
-	/*@GetMapping("/product/get/{id}")
+	
+	@GetMapping("/product/get/{id}")
 	public ModelAndView getSelectedProduct(@PathVariable("id") String id, RedirectAttributes redirectAttributes) {
+		log.info("Search started");
 		ModelAndView mv = new ModelAndView("index");
-		redirectAttributes.addFlashAttribute("selectedProduct",  productDAO.get(id));
+		 product =  productDAO.get(id);
+		redirectAttributes.addFlashAttribute("selectedProducts",  product);
 		redirectAttributes.addFlashAttribute("isUserSelectedProduct",  true);
+		mv.addObject("getProduct", true);
+		log.info("Search End");
 		return mv;
 	}
-*/
+
 	@RequestMapping("/product/save/")
 	public ModelAndView saveProduct(@RequestParam("id") String id, @RequestParam("name") String name,
 			@RequestParam("description") String description, @RequestParam("price") String price,
 			@RequestParam("categoryID") String categoryID, @RequestParam("supplierID") String supplierID,
 			@RequestParam("file") MultipartFile file) {
 		ModelAndView mv = new ModelAndView("redirect:/addproducts");
+		log.info("Saving Product");
 		product.setId(id);
 		product.setName(name);
 		product.setDescription(description);
@@ -84,6 +82,7 @@ public class ProductController {
 		} else {
 			mv.addObject("productErrorMessage", "Coulc not able to create product.  please contact admin");
 		}
+		
 		return mv;
 	}
 
@@ -102,8 +101,10 @@ public class ProductController {
 	public ModelAndView deleteProduct(@RequestParam String id) {
 		System.out.println("going to delete product : " + id);
 		ModelAndView mv = new ModelAndView("redirect:/viewproducts");
+		log.info("deleting Product");
 		if (productDAO.delete(id) == true) {
 			mv.addObject("successMessage", "The product deleted successfully");
+			log.info("product deleted");
 		} else {
 			mv.addObject("errorMessage", "Could not delete the product.");
 		}
@@ -129,11 +130,12 @@ public class ProductController {
 	public ModelAndView searchProduct(@RequestParam("searchString") String searchString)
 	{
 		ModelAndView mv = new ModelAndView("index");
+		log.info("Search started");
 		List<Product> products =  productDAO.search(searchString);
 		mv.addObject("selectedProducts", products);
 		mv.addObject("isUserSelectedProduct", true);
+		mv.addObject("searchProducts", true);
 		if(products.size()<=0) {
-			System.out.println("***********************************************************************************************");
 			mv.addObject("searchError", "Product not found try again with valid characters");
 		}
 		log.info("Number of products with search string " +searchString +  " is/are : " + products.size());

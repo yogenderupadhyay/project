@@ -25,7 +25,7 @@ public class ProductDAOIMPL implements ProductDAO {
 		try {
 			List<Product> products = sessionFactory.getCurrentSession().createQuery("from Product").list();
 			int count = products.size();
-			String str="C_00"+ count +"-"+ product.getId();
+			String str="P_00"+ count +"-"+ product.getId();
 			product.setId(str);
 			sessionFactory.getCurrentSession().save(product);
 			return true;

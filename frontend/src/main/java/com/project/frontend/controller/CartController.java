@@ -35,7 +35,7 @@ public class CartController {
 	@GetMapping("/Buy")
 	public ModelAndView order()
 	{
-		ModelAndView mv = new ModelAndView("home");
+		ModelAndView mv = new ModelAndView("index");
 		String loggedInUserID =(String) httpSession.getAttribute("loggedInUserID");
 		if (cartDAO.update(loggedInUserID))
 		{
@@ -48,9 +48,9 @@ public class CartController {
 		
 		return mv;
 	}
-	@GetMapping("/cartadd{productID}")
+	@GetMapping("/cartadd/{productID}")
 	public ModelAndView addToCart(
-			@PathVariable String productID	)
+			@PathVariable("productID") String productID	)
 	{
 		ModelAndView mv = new ModelAndView("index");
 		String loggedInUserID = (String) httpSession.getAttribute("loggedInUserID");
@@ -59,10 +59,11 @@ public class CartController {
 			mv.addObject("errorMessage", "Please login to add any product to cart");
 			return mv;
 		}
-		String pID = product.getId();		
+		product=productDAO.get(productID);	
+		System.out.println(product);
 		cart.setEmailID(loggedInUserID);
 		cart.setPrice(product.getPrice());
-		cart.setProductID(pID);
+		cart.setProductID(productID);
 		cart.setProductName(product.getName());
 		cart.setQuantity(1);
 		cart.setId();
