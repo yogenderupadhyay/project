@@ -28,7 +28,7 @@ color: white;
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="${root}/"><img src="${images}/logo.PNG" alt="logo" height="50px" width="50px"></a>
+      <a class="navbar-brand" href="${root}/"><img src="logo.PNG" alt="logo" height="50px" width="50px"></a>
       <a class="navbar-brand" href="${root}/">SHOPPING BAZAR</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">

@@ -15,7 +15,7 @@
 <i class="fa fa-frown-o" style="font-size:48px;color:red">${errorMessage}</i><br>
 </c:if>
 <div class="container">
-<img src="resources/images/login.PNG" >
+<img src="resources/images/login.png" >
   <h2>Login Here</h2>
   <form action="validate" method="post">
     <div class="form-group">

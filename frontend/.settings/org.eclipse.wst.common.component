@@ -3,7 +3,7 @@
     
     
     
-    <wb-module deploy-name="frontend">
+    <wb-module deploy-name="Frontend">
                                         
         
         
@@ -32,12 +32,8 @@
         
         
         
-        <property name="context-root" value="frontend"/>
-                                        
-        
-        
-        
-        <property name="java-output-path" value="/frontend/target/classes"/>
+        <property name="java-output-path" value="/Frontend/target/classes"/>
+        <property name="context-root" value="Frontend"/>
                                     
     
     

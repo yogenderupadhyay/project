@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
+import org.hibernate.SessionFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,6 +45,9 @@ public class ProductController {
 	@Autowired
 	FileUtil fileUtil;
 	
+	@Autowired
+	private SessionFactory sessionFactory;
+	
 	Logger log = LoggerFactory.getLogger(ProductController.class);
 	
 	@GetMapping("/productget/{product.id}")
@@ -64,6 +68,7 @@ public class ProductController {
 			@RequestParam("file") MultipartFile file) {
 		ModelAndView mv = new ModelAndView("redirect:/addproducts");
 		log.info("Saving Product");
+		mv.addObject("productSuccessMessage", "The product created successfully");
 		product.setId(id);
 		product.setName(name);
 		product.setDescription(description);
@@ -72,8 +77,8 @@ public class ProductController {
 		product.setCategoryId(categoryID);
 		product.setSupplierId(supplierID);
 		if (productDAO.save(product)) {
-			mv.addObject("productSuccessMessage", "The product created successfully");
-			if (FileUtil.copyFileNIO(file, id + ".PNG")) {
+			
+			if (FileUtil.copyFileNIO(file, product.getId() + ".PNG")) {
 				mv.addObject("uploadMessage", "product image successfully updated");
 			} else {
 				mv.addObject("uploadMessage", "Coulod not upload image");

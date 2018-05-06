@@ -19,7 +19,7 @@
  <div class="col-xs-3">
  <table class="table table-condensed table-hover">
 
-<tr><td><img alt="" src="resources/images/${product.id}.PNG"><br>
+<tr><td><img alt="" src="${imageDirectory}\${product.id}.PNG"><br>
 
 ${product.name}<br>
 <i class="fa fa-inr"> ${product.price}</i><br>

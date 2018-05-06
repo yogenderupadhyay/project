@@ -1,6 +1,8 @@
 package com.project.frontend.controller;
 
 import java.io.File;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 
 import javax.servlet.ServletContext;
@@ -27,8 +29,9 @@ public class IndexController {
 	private ProductDAO productDAO;
 	@Autowired
 	private HttpSession httpSession;
-	
-	public static String imageDirectory="F:\\Workstation\\frontend\\src\\main\\webapp\\resources\\images\\uploads";
+	/*public static final String imageDirectory="F:\\images\\";*/
+	public static final String imageDirectory="\\Resources\\images\\uploads\\";
+
 	@RequestMapping("/")
 	public ModelAndView index(HttpServletRequest request) {
 		ModelAndView mv = new ModelAndView("index");
