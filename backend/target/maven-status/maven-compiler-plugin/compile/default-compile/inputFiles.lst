@@ -1,4 +1,6 @@
 F:\Workstation\backend\src\main\java\com\project\backend\DAO\UserDAO.java
+F:\Workstation\backend\src\main\java\com\project\backend\domain\Cart.java
+F:\Workstation\backend\src\main\java\com\project\backend\DAO\CartDAO.java
 F:\Workstation\backend\src\main\java\com\project\backend\DAO\SupplierDAO.java
 F:\Workstation\backend\src\main\java\com\project\backend\daoimpl\UserDAOIMPL.java
 F:\Workstation\backend\src\main\java\com\project\backend\config\ApplicationContextConfig.java
@@ -7,6 +9,7 @@ F:\Workstation\backend\src\main\java\com\project\backend\domain\Category.java
 F:\Workstation\backend\src\main\java\com\project\backend\domain\Supplier.java
 F:\Workstation\backend\src\main\java\com\project\backend\DAO\CategoryDAO.java
 F:\Workstation\backend\src\main\java\com\project\backend\domain\User.java
+F:\Workstation\backend\src\main\java\com\project\backend\daoimpl\CartDAOIMPL.java
 F:\Workstation\backend\src\main\java\com\project\backend\DAO\ProductDAO.java
 F:\Workstation\backend\src\main\java\com\project\backend\daoimpl\CategoryDAOIMPL.java
 F:\Workstation\backend\src\main\java\com\project\backend\daoimpl\SupplierDAOIMPL.java

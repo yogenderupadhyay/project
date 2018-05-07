@@ -1,7 +1,7 @@
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" isELIgnored="false"
     pageEncoding="ISO-8859-1"%>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-    <c:set var="root" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -11,11 +11,13 @@
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 </head>
 <body>
-
+<c:if test="${(errorMessage!=null)}">
+<i class="fa fa-frown-o" style="font-size:48px;color:red">${errorMessage}</i><br>
+</c:if>
 <div class="container">
-<img src="resources/images/login.png" height=70px width=70px>
+<img src="resources/images/login.png" >
   <h2>Login Here</h2>
-  <form action="${root}/validate" method="post">
+  <form action="validate" method="post">
     <div class="form-group">
       <label for="email">Email:</label>
       <input type="email" class="form-control" id="email" placeholder="Enter email" name="uname">
@@ -25,7 +27,10 @@
       <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="psw">
     </div>
     <div class="checkbox">
-      <label><input type="checkbox" name="remember"> Remember me</label>
+    <input  id ="rem"type="checkbox" value="on" name="remember">
+      <label for="rem"> Remember me</label>
+      
+      <input id="rem" type="hidden" value="No" name="remember">
     </div>
     <button type="submit" class="btn btn-default">Submit</button>
   </form>

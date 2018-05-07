@@ -19,9 +19,10 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 
+	<mvc:annotation-driven />
 	<mvc:resources mapping="/Resources/**" location="/Resources/" />
 	<mvc:resources mapping="/Resources/**" location="/Resources/images/" />
-	<mvc:annotation-driven />
+	
 	<beans:bean id="multipartResolver"
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 

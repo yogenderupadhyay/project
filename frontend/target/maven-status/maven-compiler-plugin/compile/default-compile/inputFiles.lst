@@ -1,8 +1,9 @@
-F:\Workstation\frontend\src\main\java\com\project\frontend\controller\CartController.java
-F:\Workstation\frontend\src\main\java\com\project\frontend\controller\AdminController.java
-F:\Workstation\frontend\src\main\java\com\project\frontend\controller\SupplierController.java
-F:\Workstation\frontend\src\main\java\com\project\frontend\controller\ProductController.java
-F:\Workstation\frontend\src\main\java\com\project\frontend\controller\IndexController.java
-F:\Workstation\frontend\src\main\java\com\project\frontend\controller\CategoryController.java
-F:\Workstation\frontend\src\main\java\com\project\frontend\controller\UserController.java
-F:\Workstation\frontend\src\main\java\com\project\frontend\util\FileUtil.java
+F:\Workstation\frontend\src\main\java\com\project\niit\controller\SpringSecurityController.java
+F:\Workstation\frontend\src\main\java\com\project\niit\controller\UserController.java
+F:\Workstation\frontend\src\main\java\com\project\niit\util\FileUtil.java
+F:\Workstation\frontend\src\main\java\com\project\niit\controller\CartController.java
+F:\Workstation\frontend\src\main\java\com\project\niit\controller\CategoryController.java
+F:\Workstation\frontend\src\main\java\com\project\niit\controller\ProductController.java
+F:\Workstation\frontend\src\main\java\com\project\niit\controller\SupplierController.java
+F:\Workstation\frontend\src\main\java\com\project\niit\controller\AdminController.java
+F:\Workstation\frontend\src\main\java\com\project\niit\controller\IndexController.java

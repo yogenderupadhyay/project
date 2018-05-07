@@ -50,12 +50,12 @@ private static AnnotationConfigApplicationContext context;
 		boolean status = supplierDAO.update(supplier);
 		assertEquals("update test case", true,status );
 	}*/
-	@Test
+	/*@Test
 	public void getSupplierSuccessTestCase()
 	{
 	supplier= supplierDAO.get("SUP-001");
 	assertNotNull("get supplier test case", supplier);
-	}
+	}*/
 	@Test
 	public void getSupplierFailureTestCase()
 	{
@@ -74,10 +74,10 @@ private static AnnotationConfigApplicationContext context;
 	boolean status =	supplierDAO.delete("SUP-004");
 	assertEquals("delete supplier failure test case" , false, status);
 	}
-	@Test
+	/*@Test
 	public void getAllSuppliersTestCase()
 	{
 	List<Supplier>	suppliers = supplierDAO.list();
 	assertEquals("get all usres " , 4, suppliers.size() );
-	}
+	}*/
 }

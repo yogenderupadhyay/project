@@ -1,7 +1,9 @@
-com\project\frontend\controller\SupplierController.class
-com\project\frontend\controller\UserController.class
-com\project\frontend\controller\IndexController.class
-com\project\frontend\controller\AdminController.class
-com\project\frontend\controller\ProductController.class
-com\project\frontend\controller\CategoryController.class
-com\project\frontend\util\FileUtil.class
+com\project\niit\controller\CartController.class
+com\project\niit\controller\ProductController.class
+com\project\niit\controller\UserController.class
+com\project\niit\util\FileUtil.class
+com\project\niit\controller\SupplierController.class
+com\project\niit\controller\AdminController.class
+com\project\niit\controller\SpringSecurityController.class
+com\project\niit\controller\CategoryController.class
+com\project\niit\controller\IndexController.class

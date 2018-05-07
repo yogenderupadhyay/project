@@ -28,7 +28,7 @@ public class UserDAOTestCase {
 		userDAO=(UserDAO)context.getBean("userDAO");
 		user= (User)context.getBean("user");
 	}
-	@Test
+/*	@Test
 	public void saveUserTestCase()
 	{
 		System.out.println("2");
@@ -43,7 +43,7 @@ public class UserDAOTestCase {
 	  boolean status = 	userDAO.save(user);
 	  
 	  assertEquals("save user test case", true, status);
-	}
+	}*/
 	/*@Test
 	public void updateUserTestCase()
 	{
@@ -88,14 +88,14 @@ public class UserDAOTestCase {
 	}
 	
 	
-	@Test
+	/*@Test
 	public void getAllUsersTestCase()
 	{
 	List<User>	users = userDAO.list();
 	
 	assertEquals("get all usres " , 3, users.size() );
 	
-	}
+	}*/
 	@Test
 	public void validateCredentailsTestCase()
 	{

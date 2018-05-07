@@ -1,10 +1,13 @@
 com\project\backend\daoimpl\SupplierDAOIMPL.class
+com\project\backend\domain\Cart.class
 com\project\backend\config\ApplicationContextConfig.class
 com\project\backend\DAO\UserDAO.class
 com\project\backend\DAO\SupplierDAO.class
 com\project\backend\domain\Category.class
 com\project\backend\DAO\CategoryDAO.class
 com\project\backend\daoimpl\CategoryDAOIMPL.class
+com\project\backend\DAO\CartDAO.class
+com\project\backend\daoimpl\CartDAOIMPL.class
 com\project\backend\daoimpl\ProductDAOIMPL.class
 com\project\backend\daoimpl\UserDAOIMPL.class
 com\project\backend\domain\Supplier.class

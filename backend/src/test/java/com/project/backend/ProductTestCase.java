@@ -52,12 +52,12 @@ private static AnnotationConfigApplicationContext context;
 		boolean status = productDAO.update(product);
 		assertEquals("update test case", true,status );
 	}*/
-	@Test
+	/*@Test
 	public void getProductSuccessTestCase()
 	{
 	product= productDAO.get("C_000-mobile");
 	assertNotNull("get product test case", product.getName());
-	}
+	}*/
 	/*@Test
 	public void getProductFailureTestCase()
 	}
