@@ -19,7 +19,7 @@
 <tr>
 <td>
 ${selectedProduct.id}
-<img alt="" src="resources/images/${selectedProduct.id}.PNG"></td>
+<img alt="" src="Resources/images/uploads/${selectedProduct.id}.PNG"></td>
 </tr>
 <tr><td>${selectedProducts.name}<br>
 <i class="fa fa-inr"> ${selectedProducts.price}</i><br>
